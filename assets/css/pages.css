@@ -1132,6 +1132,20 @@
   flex-wrap: wrap;
 }
 
+@media (max-width: 520px) {
+  .hero-cta-group,
+  .cta-banner-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-cta-group .btn,
+  .cta-banner-buttons .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 /* Premium hero badges (facts) */
 .hero-badges {
   display: flex;
@@ -1370,14 +1384,16 @@
 
 .menu-package-card .package-badge {
   position: absolute;
-  top: var(--space-4);
-  right: var(--space-4);
+  top: 0;
+  right: var(--space-6);
   background: var(--color-accent);
   color: white;
   padding: var(--space-1) var(--space-3);
   border-radius: var(--radius-full);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
 .package-header {
@@ -1509,8 +1525,8 @@
 
 .package-card .package-badge {
   position: absolute;
-  top: var(--space-4);
-  right: var(--space-4);
+  top: 0;
+  right: var(--space-6);
   background: var(--color-accent);
   color: white;
   padding: var(--space-1) var(--space-3);
@@ -1518,6 +1534,8 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
 .package-title {
