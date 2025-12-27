@@ -1064,15 +1064,24 @@
 /* Hero Section - Alternative naming */
 .hero-section {
   position: relative;
-  min-height: clamp(520px, 65vh, 760px);
+  min-height: clamp(480px, 60vh, 760px);
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: var(--space-12) 0;
+  padding: calc(84px + var(--space-6)) 0 var(--space-8);
   isolation: isolate;
+  overflow: hidden;
+  max-width: 100vw;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    min-height: clamp(520px, 65vh, 760px);
+    padding: var(--space-12) 0;
+  }
 }
 
 .hero-section::before {
