@@ -161,7 +161,8 @@
   // ========== Scroll Animations (using Intersection Observer) ==========
   const animatedElements = document.querySelectorAll('.section, .card, .service-card, .testimonial');
 
-  if ('IntersectionObserver' in window) {
+  // Keep motion subtle + reliable; also respect reduced-motion
+  if ('IntersectionObserver' in window && !prefersReducedMotion) {
     const animationObserver = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
@@ -173,7 +174,8 @@
         });
       },
       {
-        threshold: 0.1,
+        // IMPORTANT: include 0 so very tall sections still become visible on mobile
+        threshold: 0,
         rootMargin: '0px 0px -50px 0px'
       }
     );
