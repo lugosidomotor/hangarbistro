@@ -9,6 +9,8 @@
   'use strict';
 
   // Initialize navigation after partials are loaded
+  let isNavigationInitialized = false;
+
   function initNavigation() {
     // ========== Mobile Menu Toggle ==========
     const navToggle = document.querySelector('.navbar__toggle');
@@ -18,13 +20,15 @@
     const navMobileLinks = document.querySelectorAll('.navbar__mobile-link');
 
     if (!navToggle || !navMobile) return; // Exit if elements not found
+    if (isNavigationInitialized) return;
+    isNavigationInitialized = true;
 
   function openMobileMenu() {
     navToggle.classList.add('navbar__toggle--active');
     navToggle.setAttribute('aria-expanded', 'true');
     navMobile.classList.add('navbar__mobile--active');
     navMobile.setAttribute('aria-hidden', 'false');
-    navBackdrop.classList.add('navbar__backdrop--active');
+    if (navBackdrop) navBackdrop.classList.add('navbar__backdrop--active');
     document.body.style.overflow = 'hidden';
   }
 
@@ -33,7 +37,7 @@
     navToggle.setAttribute('aria-expanded', 'false');
     navMobile.classList.remove('navbar__mobile--active');
     navMobile.setAttribute('aria-hidden', 'true');
-    navBackdrop.classList.remove('navbar__backdrop--active');
+    if (navBackdrop) navBackdrop.classList.remove('navbar__backdrop--active');
     document.body.style.overflow = '';
   }
 
@@ -120,9 +124,9 @@
 
     // Add shadow when scrolled
     if (scrollTop > 10) {
-      navbar.style.boxShadow = 'var(--shadow-md)';
+      if (navbar) navbar.style.boxShadow = 'var(--shadow-md)';
     } else {
-      navbar.style.boxShadow = 'var(--shadow-sm)';
+      if (navbar) navbar.style.boxShadow = 'var(--shadow-sm)';
     }
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;

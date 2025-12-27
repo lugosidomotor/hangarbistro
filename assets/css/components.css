@@ -25,6 +25,18 @@
   z-index: 1;
 }
 
+@media (max-width: 420px) {
+  .btn {
+    white-space: normal;
+  }
+
+  .btn-lg,
+  .btn-large {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--font-size-base);
+  }
+}
+
 .btn::before {
   content: '';
   position: absolute;

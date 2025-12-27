@@ -33,6 +33,10 @@ h6 {
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--color-text-primary);
+  hyphens: none;
+  -webkit-hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
   margin-top: 0;
   margin-bottom: var(--space-3);
 }
