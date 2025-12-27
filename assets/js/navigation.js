@@ -8,12 +8,16 @@
 (function () {
   'use strict';
 
-  // ========== Mobile Menu Toggle ==========
-  const navToggle = document.querySelector('.navbar__toggle');
-  const navMobile = document.querySelector('.navbar__mobile');
-  const navBackdrop = document.querySelector('.navbar__backdrop');
-  const navMobileClose = document.querySelector('.navbar__mobile-close');
-  const navMobileLinks = document.querySelectorAll('.navbar__mobile-link');
+  // Initialize navigation after partials are loaded
+  function initNavigation() {
+    // ========== Mobile Menu Toggle ==========
+    const navToggle = document.querySelector('.navbar__toggle');
+    const navMobile = document.querySelector('.navbar__mobile');
+    const navBackdrop = document.querySelector('.navbar__backdrop');
+    const navMobileClose = document.querySelector('.navbar__mobile-close');
+    const navMobileLinks = document.querySelectorAll('.navbar__mobile-link');
+
+    if (!navToggle || !navMobile) return; // Exit if elements not found
 
   function openMobileMenu() {
     navToggle.classList.add('navbar__toggle--active');
@@ -186,7 +190,21 @@
     });
   }
 
-  setActiveLinks(navLinks, 'navbar__link--active');
-  setActiveLinks(navMobileLinksAll, 'navbar__mobile-link--active');
+    setActiveLinks(navLinks, 'navbar__link--active');
+    setActiveLinks(navMobileLinksAll, 'navbar__mobile-link--active');
+  }
+
+  // Listen for partial load event
+  document.addEventListener('partialLoaded', function (e) {
+    if (e.detail.id === 'header-placeholder') {
+      initNavigation();
+    }
+  });
+
+  // Also try to init on DOMContentLoaded (fallback for direct HTML)
+  document.addEventListener('DOMContentLoaded', function () {
+    // Small delay to ensure partials are loaded
+    setTimeout(initNavigation, 100);
+  });
 
 })();

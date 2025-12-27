@@ -93,7 +93,8 @@
   font-size: var(--font-size-sm);
 }
 
-.btn-lg {
+.btn-lg,
+.btn-large {
   padding: var(--space-4) var(--space-8);
   font-size: var(--font-size-lg);
 }

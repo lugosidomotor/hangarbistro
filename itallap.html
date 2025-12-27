@@ -109,39 +109,8 @@
 <body>
   <a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
 
-  <header class="navbar">
-    <div class="container navbar__container">
-      <a href="index.html" class="navbar__logo">
-        <img src="assets/images/logo.png" alt="Hangár Bistro logó" width="150" height="50">
-      </a>
-      <nav class="navbar__menu" aria-label="Főmenü">
-        <a href="index.html" class="navbar__link">Főoldal</a>
-        <a href="rendezvények.html" class="navbar__link">Rendezvények</a>
-        <a href="etlap.html" class="navbar__link">Étlap</a>
-        <a href="itallap.html" class="navbar__link navbar__link--active">Itallap</a>
-        <a href="index.html#kapcsolat" class="navbar__link">Kapcsolat</a>
-      </nav>
-      <a href="index.html#kapcsolat" class="btn btn-primary navbar__cta">Ajánlatkérés</a>
-      <button class="navbar__toggle" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <nav class="navbar__mobile" id="mobile-menu" aria-hidden="true">
-      <div class="navbar__mobile-header">
-        <img src="assets/images/logo.png" alt="Hangár Bistro" style="height: 34px;">
-        <button class="navbar__mobile-close" aria-label="Menü bezárása">×</button>
-      </div>
-      <div class="navbar__mobile-menu">
-        <a href="index.html" class="navbar__mobile-link">Főoldal</a>
-        <a href="rendezvények.html" class="navbar__mobile-link">Rendezvények</a>
-        <a href="etlap.html" class="navbar__mobile-link">Étlap</a>
-        <a href="itallap.html" class="navbar__mobile-link navbar__mobile-link--active">Itallap</a>
-        <a href="index.html#kapcsolat" class="navbar__mobile-link">Kapcsolat</a>
-      </div>
-      <a href="index.html#kapcsolat" class="btn btn-primary btn-block">Ajánlatkérés</a>
-    </nav>
-    <div class="navbar__backdrop"></div>
-  </header>
+  <!-- Navigation (loaded from partials/header.html) -->
+  <div id="header-placeholder"></div>
 
   <main id="main-content">
     <section class="section">
@@ -403,39 +372,10 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__content">
-        <div class="footer__column">
-          <h3>Kapcsolat</h3>
-          <div class="footer__contact-item"><span>📞</span>
-            <div><a href="tel:+36706577198">+36 70 657 7198</a></div>
-          </div>
-          <div class="footer__contact-item"><span>✉️</span>
-            <div><a href="mailto:info@hangarbistro.hu">info@hangarbistro.hu</a></div>
-          </div>
-          <div class="footer__contact-item"><span>📍</span>
-            <div>Zöldbázis terület<br>Hármashatár-hegy<br>Budapest 1037</div>
-          </div>
-        </div>
-        <div class="footer__column">
-          <h3>Menü</h3>
-          <a href="etlap.html" class="footer__link">Étlap</a>
-          <a href="itallap.html" class="footer__link">Itallap</a>
-          <a href="rendezvények.html" class="footer__link">Rendezvények</a>
-        </div>
-        <div class="footer__column">
-          <h3>Oldaltérkép</h3>
-          <a href="index.html" class="footer__link">Főoldal</a>
-          <a href="index.html#kapcsolat" class="footer__link">Kapcsolat</a>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; 2025 Hangár Bistro - Étterem és rendezvényhelyszín. Minden jog fenntartva.</p>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer (loaded from partials/footer.html) -->
+  <div id="footer-placeholder"></div>
 
+  <script src="assets/js/partials.js"></script>
   <script src="assets/js/navigation.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
