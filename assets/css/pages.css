@@ -67,9 +67,14 @@
   color: rgba(255, 255, 255, 0.92);
   text-shadow: 0 10px 32px rgba(0, 0, 0, 0.28);
   margin-bottom: var(--space-10);
-  max-width: 600px;
+  max-width: none;
   margin-left: auto;
   margin-right: auto;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  hyphens: none;
+  -webkit-hyphens: none;
 }
 
 .hero .btn-secondary {
@@ -203,10 +208,13 @@
   font-size: var(--font-size-xl);
   margin-bottom: var(--space-3);
   color: var(--color-text-primary);
+  hyphens: none;
+  -webkit-hyphens: none;
+  overflow-wrap: normal;
 }
 
 .service-card__description {
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
   color: var(--color-text-secondary);
   flex: 0 0 auto;
 }
@@ -214,7 +222,7 @@
 .service-card__features {
   list-style: none;
   padding-left: 0;
-  margin-bottom: var(--space-4);
+  margin: var(--space-3) 0 var(--space-4);
 }
 
 .service-card__features li {
@@ -595,6 +603,31 @@
 
 .contact-method__link:hover {
   color: var(--color-primary-light);
+}
+
+/* Contact section: Opening hours + map should be equal-sized on desktop */
+.contact-info-grid {
+  align-items: stretch;
+  --contact-panel-height: clamp(360px, 40vw, 460px);
+}
+
+.contact-info-grid .opening-hours {
+  margin-top: 0;
+  height: var(--contact-panel-height);
+}
+
+.contact-info-grid .location-map {
+  height: var(--contact-panel-height);
+}
+
+@media (max-width: 767px) {
+  .contact-info-grid .opening-hours {
+    height: auto;
+  }
+
+  .contact-info-grid .location-map {
+    height: 320px;
+  }
 }
 
 /* Opening Hours Box */
