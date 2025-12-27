@@ -127,29 +127,66 @@
 
   // ========== Active Link Highlighting ==========
   const navLinks = document.querySelectorAll('.navbar__link');
-  const currentPath = window.location.pathname;
+  const currentUrl = new URL(window.location.href);
+
+  function canonicalizePathname(pathname) {
+    if (!pathname) return '';
+    let p = pathname;
+    p = p.replace(/\/+$/, '');
+    p = p.replace(/\/index\.html$/, '');
+    return p;
+  }
 
   navLinks.forEach(function (link) {
-    const linkPath = link.getAttribute('href');
-
-    // Check if current page matches link
-    if (currentPath === linkPath || (currentPath === '/' && linkPath === '/')) {
-      link.classList.add('navbar__link--active');
-    } else {
-      link.classList.remove('navbar__link--active');
-    }
+    link.classList.remove('navbar__link--active');
   });
 
   // Same for mobile links
   const navMobileLinksAll = document.querySelectorAll('.navbar__mobile-link');
-  navMobileLinksAll.forEach(function (link) {
-    const linkPath = link.getAttribute('href');
 
-    if (currentPath === linkPath || (currentPath === '/' && linkPath === '/')) {
-      link.classList.add('navbar__mobile-link--active');
-    } else {
-      link.classList.remove('navbar__mobile-link--active');
-    }
+  navMobileLinksAll.forEach(function (link) {
+    link.classList.remove('navbar__mobile-link--active');
   });
+
+  // Highlight active link (supports relative hrefs + GitHub Pages subpaths)
+  function setActiveLinks(links, activeClass) {
+    const currentPath = canonicalizePathname(currentUrl.pathname);
+    const currentHash = currentUrl.hash || '';
+
+    // Prefer hash-matching links when there is a hash in the URL
+    let hasHashMatch = false;
+    links.forEach(function (link) {
+      const href = link.getAttribute('href');
+      if (!href) return;
+      const linkUrl = new URL(href, currentUrl);
+
+      const linkPath = canonicalizePathname(linkUrl.pathname);
+      const linkHash = linkUrl.hash || '';
+
+      if (currentHash && linkHash && linkPath === currentPath && linkHash === currentHash) {
+        hasHashMatch = true;
+      }
+    });
+
+    links.forEach(function (link) {
+      const href = link.getAttribute('href');
+      if (!href) return;
+      const linkUrl = new URL(href, currentUrl);
+
+      const linkPath = canonicalizePathname(linkUrl.pathname);
+      const linkHash = linkUrl.hash || '';
+
+      const pathMatches = linkPath === currentPath;
+      const hashMatches = !linkHash || linkHash === currentHash;
+
+      const isActive = hasHashMatch ? (pathMatches && linkHash && linkHash === currentHash) : (pathMatches && hashMatches);
+
+      if (isActive) link.classList.add(activeClass);
+      else link.classList.remove(activeClass);
+    });
+  }
+
+  setActiveLinks(navLinks, 'navbar__link--active');
+  setActiveLinks(navMobileLinksAll, 'navbar__mobile-link--active');
 
 })();
