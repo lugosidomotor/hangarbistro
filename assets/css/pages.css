@@ -6,7 +6,7 @@
 
 .hero {
   position: relative;
-  height: clamp(600px, 80vh, 1000px);
+  min-height: clamp(600px, 80vh, 1000px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,6 +51,7 @@
 /* Events listing hero: blur + subtle dark overlay for readable white text */
 .hero--events {
   background-color: #000;
+  padding-top: 84px; /* navbar is fixed on desktop too */
 }
 
 .hero--events .hero__overlay {
@@ -1131,6 +1132,49 @@
   flex-wrap: wrap;
 }
 
+/* Premium hero badges (facts) */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin: var(--space-4) 0 var(--space-6);
+  padding: 0;
+  list-style: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.hero-badge__icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-badge__icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
 /* Make CTA buttons readable on dark/blurred event heroes */
 .hero-section .btn-primary {
   color: var(--color-white);
@@ -1180,7 +1224,7 @@
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: var(--space-6);
   margin-top: var(--space-6);
 }
@@ -1305,7 +1349,7 @@
 
 .menu-packages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: var(--space-6);
   margin-top: var(--space-6);
 }
@@ -1410,7 +1454,7 @@
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: var(--space-4);
   margin-top: var(--space-6);
 }
@@ -1442,7 +1486,7 @@
 
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: var(--space-6);
   margin-top: var(--space-6);
 }
@@ -1522,7 +1566,7 @@
 
 .cross-sell-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: var(--space-6);
   margin-top: var(--space-6);
 }

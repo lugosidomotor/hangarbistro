@@ -26,6 +26,10 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link rel="apple-touch-icon" href="../assets/images/logo.png">
+
+    <!-- Perf -->
+    <link rel="preload" as="image" href="../assets/images/heroes/eskuvo-hero.jpg">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -140,15 +144,22 @@
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
     <!-- Header Placeholder -->
     <div id="header-placeholder"></div>
 
+    <main id="main-content">
     <!-- Hero Section -->
     <section class="hero-section" style="background-image: url('../assets/images/heroes/eskuvo-hero.jpg');">
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Esküvő a Hangár Bistroban</h1>
                 <p class="hero-subtitle">Álomesküvő természetközeli környezetben, páratlan panorámával és teljes körű szervezéssel</p>
+                <ul class="hero-badges" role="list">
+                    <li class="hero-badge"><span class="hero-badge__icon" aria-hidden="true">👥</span><span>50–150 fő</span></li>
+                    <li class="hero-badge"><span class="hero-badge__icon" aria-hidden="true">✨</span><span>Teljes körű szervezés</span></li>
+                    <li class="hero-badge"><span class="hero-badge__icon" aria-hidden="true">🅿️</span><span>Ingyenes parkolás</span></li>
+                </ul>
                 <div class="hero-cta-group">
                     <a href="tel:+36706577198" class="btn btn-primary">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -866,7 +877,7 @@
 
             <div class="cross-sell-grid">
                 <a href="lanykeres.html" class="cross-sell-card glass-border">
-                    <div class="cross-sell-image" style="background-image: url('https://images.unsplash.com/photo-1545153996-89d2a8d0f764?w=600&q=80');"></div>
+                    <div class="cross-sell-image" style="background-image: url('../assets/images/heroes/lanykeres-hero.jpg');"></div>
                     <div class="cross-sell-content">
                         <h3 class="cross-sell-title">Lánykérés</h3>
                         <p class="cross-sell-description">A tökéletes "igen" pillanatához romantikus helyszín, diszkrét szervezéssel.</p>
@@ -937,6 +948,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>

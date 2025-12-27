@@ -20,6 +20,13 @@
     <!-- Theme Color -->
     <meta name="theme-color" content="#F8F7F3">
 
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link rel="apple-touch-icon" href="../assets/images/logo.png">
+
+    <!-- Perf -->
+    <link rel="preload" as="image" href="../assets/images/heroes/lanykeres-hero.jpg">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,15 +93,22 @@
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
     <!-- Header Placeholder -->
     <div id="header-placeholder"></div>
 
+    <main id="main-content">
     <!-- Hero Section -->
     <section class="hero-section" style="background-image: url('../assets/images/heroes/lanykeres-hero.jpg');">
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Lánykérés a Hangár Bistroban</h1>
                 <p class="hero-subtitle">A tökéletes „igen" pillanatához tökéletes helyszín – romantikus környezet, páratlan panoráma és diszkrét szervezés</p>
+                <ul class="hero-badges" role="list">
+                    <li class="hero-badge"><span class="hero-badge__icon" aria-hidden="true">🕯️</span><span>Privát & diszkrét</span></li>
+                    <li class="hero-badge"><span class="hero-badge__icon" aria-hidden="true">📸</span><span>Fotós opció</span></li>
+                    <li class="hero-badge"><span class="hero-badge__icon" aria-hidden="true">⏱</span><span>Válasz 24 órán belül</span></li>
+                </ul>
                 <div class="hero-cta-group">
                     <a href="tel:+36706577198" class="btn btn-primary">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -752,6 +766,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>

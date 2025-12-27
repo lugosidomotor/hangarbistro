@@ -13,7 +13,7 @@
 
     if (!faqQuestions.length) return;
 
-    faqQuestions.forEach(function (question) {
+    faqQuestions.forEach(function (question, index) {
       // Avoid binding multiple listeners when partials fire multiple times
       if (question.dataset.faqBound === '1') return;
       question.dataset.faqBound = '1';
@@ -34,6 +34,23 @@
         return null;
       };
 
+      const ensureA11yLinking = function (answerEl) {
+        // Ensure question has an id for aria-labelledby
+        if (!question.id) {
+          question.id = `faq-q-${index + 1}`;
+        }
+
+        if (!answerEl) return;
+
+        if (!answerEl.id) {
+          answerEl.id = `faq-a-${index + 1}`;
+        }
+
+        question.setAttribute('aria-controls', answerEl.id);
+        answerEl.setAttribute('role', 'region');
+        answerEl.setAttribute('aria-labelledby', question.id);
+      };
+
       const setIconState = function (expanded) {
         const icon = question.querySelector('.faq-icon');
         if (!icon) return;
@@ -49,12 +66,14 @@
       // Apply initial hidden state (many event pages ship without `hidden`)
       const initialExpanded = question.getAttribute('aria-expanded') === 'true';
       const initialAnswer = getAnswerEl();
+      ensureA11yLinking(initialAnswer);
       if (initialAnswer) initialAnswer.hidden = !initialExpanded;
       setIconState(initialExpanded);
 
       question.addEventListener('click', function () {
         const isExpanded = this.getAttribute('aria-expanded') === 'true';
         const answer = getAnswerEl();
+        ensureA11yLinking(answer);
 
         // Toggle current item
         if (isExpanded) {
