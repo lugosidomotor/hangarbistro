@@ -144,7 +144,7 @@
 .navbar__mobile {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
   width: 80%;
   max-width: 400px;
   height: 100vh;
@@ -152,12 +152,14 @@
   box-shadow: var(--shadow-xl);
   padding: var(--space-6);
   overflow-y: auto;
-  transition: right var(--transition-base);
+  transform: translateX(100%);
+  transition: transform var(--transition-base);
+  will-change: transform;
   z-index: var(--z-modal);
 }
 
 .navbar__mobile--active {
-  right: 0;
+  transform: translateX(0);
 }
 
 .navbar__mobile-header {
