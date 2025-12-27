@@ -1670,6 +1670,10 @@
   font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
   margin-bottom: var(--space-4);
+  /* Prevent long Hungarian words from clipping on small screens */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-wrap: balance;
 }
 
 .organizers-cta-description {
@@ -1704,6 +1708,12 @@
 
   .organizers-cta-icon {
     margin-top: var(--space-2);
+  }
+}
+
+@media (max-width: 520px) {
+  .organizers-cta-title {
+    font-size: var(--font-size-2xl);
   }
 }
 
