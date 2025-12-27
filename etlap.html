@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Étlap | Hangár Bistro - Gasztronómiai Élmények</title>
+  <meta name="description"
+    content="Változatos étlapunk hagyományos és modern fogásokkal. Minden rendezvényre személyre szabott menü.">
+  <link rel="canonical" href="https://hangarbistro.hu/etlap.html">
+  <meta name="theme-color" content="#F8F7F3">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+
+  <style>
+    .menu-category {
+      margin-bottom: var(--space-12);
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: var(--glass-blur);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      box-shadow: var(--glass-shadow);
+    }
+
+    .menu-category__title {
+      font-size: var(--font-size-2xl);
+      text-align: center;
+      margin-bottom: var(--space-8);
+      color: var(--color-accent);
+      position: relative;
+      padding-bottom: var(--space-3);
+    }
+
+    .menu-category__title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: var(--color-accent);
+      border-radius: var(--radius-full);
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--space-4);
+      margin-bottom: var(--space-4);
+      padding-bottom: var(--space-4);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+
+    .menu-item__info {
+      flex: 1;
+    }
+
+    .menu-item__name {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-1);
+    }
+
+    .menu-item__description {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    .menu-item__price {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-accent);
+      white-space: nowrap;
+    }
+
+    .menu-note {
+      background: var(--color-bg-tertiary);
+      padding: var(--space-6);
+      border-radius: var(--radius-base);
+      margin-top: var(--space-8);
+      text-align: center;
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      border: 1px solid var(--glass-border);
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
+
+  <header class="navbar">
+    <div class="container navbar__container">
+      <a href="/" class="navbar__logo">
+        <img src="/assets/images/logo.png" alt="Hangár Bistro logó" width="150" height="50">
+      </a>
+      <nav class="navbar__menu" aria-label="Főmenü">
+        <a href="/" class="navbar__link">Főoldal</a>
+        <a href="/rendezvények.html" class="navbar__link">Rendezvények</a>
+        <a href="/etlap.html" class="navbar__link navbar__link--active">Étlap</a>
+        <a href="/itallap.html" class="navbar__link">Itallap</a>
+        <a href="/#kapcsolat" class="navbar__link">Kapcsolat</a>
+      </nav>
+      <a href="/#kapcsolat" class="btn btn-primary navbar__cta">Ajánlatkérés</a>
+      <button class="navbar__toggle" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="navbar__mobile" id="mobile-menu" aria-hidden="true">
+      <div class="navbar__mobile-header">
+        <img src="/assets/images/logo.png" alt="Hangár Bistro" style="height: 34px;">
+        <button class="navbar__mobile-close" aria-label="Menü bezárása">×</button>
+      </div>
+      <div class="navbar__mobile-menu">
+        <a href="/" class="navbar__mobile-link">Főoldal</a>
+        <a href="/rendezvények.html" class="navbar__mobile-link">Rendezvények</a>
+        <a href="/etlap.html" class="navbar__mobile-link navbar__mobile-link--active">Étlap</a>
+        <a href="/itallap.html" class="navbar__mobile-link">Itallap</a>
+        <a href="/#kapcsolat" class="navbar__mobile-link">Kapcsolat</a>
+      </div>
+      <a href="/#kapcsolat" class="btn btn-primary btn-block">Ajánlatkérés</a>
+    </nav>
+    <div class="navbar__backdrop"></div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h1 class="section__title">Étlapunk</h1>
+          <p class="section__subtitle">
+            Válogatott ételek friss, minőségi alapanyagokból. Minden rendezvényre egyedi menüt állítunk össze.
+          </p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+
+          <!-- Előételek -->
+          <div class="menu-category">
+            <h2 class="menu-category__title">Előételek</h2>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Libamáj terrine</div>
+                <div class="menu-item__description">Pirított briós, áfonyás chutney, rukola</div>
+              </div>
+              <div class="menu-item__price">4 800 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Carpaccio marha szűzből</div>
+                <div class="menu-item__description">Parmezán, rukolasaláta, balzsamecet, pisztácia</div>
+              </div>
+              <div class="menu-item__price">3 900 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Grill zöldség saláta</div>
+                <div class="menu-item__description">Grillezett szezonális zöldségek, kecskesajt, mézes-balzsamecetes
+                  öntet</div>
+              </div>
+              <div class="menu-item__price">2 900 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Házi készítésű leves</div>
+                <div class="menu-item__description">Napi ajánlat alapján (gulyás, erőleves, zöldségleves)</div>
+              </div>
+              <div class="menu-item__price">1 800 Ft</div>
+            </div>
+          </div>
+
+          <!-- Főételek -->
+          <div class="menu-category">
+            <h2 class="menu-category__title">Főételek</h2>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Borjúpaprikás</div>
+                <div class="menu-item__description">Házi nokedlivel, tejfölös mártással</div>
+              </div>
+              <div class="menu-item__price">5 400 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Grill lazacsteak</div>
+                <div class="menu-item__description">Citromos-kakukkfüves quinoa, grillezett zöldségek, kapribogyós vaj
+                </div>
+              </div>
+              <div class="menu-item__price">6 200 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Mangalica karaj</div>
+                <div class="menu-item__description">Sült burgonya, pirított fokhagymás vaj, szezonális zöldségek</div>
+              </div>
+              <div class="menu-item__price">5 800 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Kacsamell narancsban</div>
+                <div class="menu-item__description">Vajas-pirított zöldség, narancsos mártás, rozmaringos burgonya</div>
+              </div>
+              <div class="menu-item__price">6 400 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Marha bélszín steak</div>
+                <div class="menu-item__description">Borsos-fokhagymás vaj, hasábburgonya, friss saláta</div>
+              </div>
+              <div class="menu-item__price">7 200 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Vegán Buddha Bowl</div>
+                <div class="menu-item__description">Quinoa, sült édesburgonya, avokádó, humusz, grillezett zöldségek,
+                  tahini szósz</div>
+              </div>
+              <div class="menu-item__price">4 200 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Rántott csirkemell</div>
+                <div class="menu-item__description">Petrezselymes burgonya, tartármártás</div>
+              </div>
+              <div class="menu-item__price">3 900 Ft</div>
+            </div>
+          </div>
+
+          <!-- Desszertek -->
+          <div class="menu-category">
+            <h2 class="menu-category__title">Desszertek</h2>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Somlói galuska</div>
+                <div class="menu-item__description">Hagyományos recept, tejszínhab, csokoládészósz</div>
+              </div>
+              <div class="menu-item__price">2 200 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Crème brûlée</div>
+                <div class="menu-item__description">Vaníliás tejszínkrém karamellizált cukorréteggel, friss bogyós
+                  gyümölcsök</div>
+              </div>
+              <div class="menu-item__price">2 400 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Tiramisu</div>
+                <div class="menu-item__description">Olasz klasszikus, mascarpone krém, kávéöntet</div>
+              </div>
+              <div class="menu-item__price">2 300 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Csokoládé mousse</div>
+                <div class="menu-item__description">Belga csokoládéból, friss málnával és menta levelekkel</div>
+              </div>
+              <div class="menu-item__price">2 500 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Házi fagylalt válogatás</div>
+                <div class="menu-item__description">3 gombóc, szezonális ízek</div>
+              </div>
+              <div class="menu-item__price">1 800 Ft</div>
+            </div>
+          </div>
+
+          <!-- Gyerekmenü -->
+          <div class="menu-category">
+            <h2 class="menu-category__title">Gyerekmenü</h2>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Rántott csirkefalatok</div>
+                <div class="menu-item__description">Hasábburgonya, ketchup</div>
+              </div>
+              <div class="menu-item__price">2 400 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Bolognai spagetti</div>
+                <div class="menu-item__description">Házi húsos szósz, reszelt sajt</div>
+              </div>
+              <div class="menu-item__price">2 200 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Mini hamburger</div>
+                <div class="menu-item__description">Marhahúspogácsa, hasábburgonya, zöldségek</div>
+              </div>
+              <div class="menu-item__price">2 600 Ft</div>
+            </div>
+          </div>
+
+          <div class="menu-note">
+            <strong>Megjegyzés:</strong> Minden rendezvényre egyedi menüt állítunk össze! Az árak tájékoztató jellegűek.
+            Allergiára, vegetáriánus és vegán étkezésre is van lehetőség - kérj személyre szabott ajánlatot!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="container">
+        <h2 class="cta-banner__title">Egyedi menüt szeretnél?</h2>
+        <p class="cta-banner__subtitle">
+          Minden rendezvényre személyre szabott étlapot állítunk össze. Kérj ajánlatot!
+        </p>
+        <div class="cta-banner__actions">
+          <a href="/#kapcsolat" class="btn btn-primary btn-lg">Ajánlatot kérek</a>
+          <a href="/itallap.html" class="btn btn-secondary btn-lg">Itallap megtekintése</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__column">
+          <h3>Kapcsolat</h3>
+          <div class="footer__contact-item"><span>📞</span>
+            <div><a href="tel:+36706577198">+36 70 657 7198</a></div>
+          </div>
+          <div class="footer__contact-item"><span>✉️</span>
+            <div><a href="mailto:info@hangarbistro.hu">info@hangarbistro.hu</a></div>
+          </div>
+          <div class="footer__contact-item"><span>📍</span>
+            <div>Zöldbázis terület<br>Hármashatár-hegy<br>Budapest 1037</div>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h3>Menü</h3>
+          <a href="/etlap.html" class="footer__link">Étlap</a>
+          <a href="/itallap.html" class="footer__link">Itallap</a>
+          <a href="/rendezvények.html" class="footer__link">Rendezvények</a>
+        </div>
+        <div class="footer__column">
+          <h3>Oldaltérkép</h3>
+          <a href="/" class="footer__link">Főoldal</a>
+          <a href="/#kapcsolat" class="footer__link">Kapcsolat</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Hangár Bistro - Étterem és rendezvényhelyszín. Minden jog fenntartva.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/navigation.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+
+</html>

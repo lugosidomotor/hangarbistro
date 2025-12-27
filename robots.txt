@@ -1,0 +1,10 @@
+# Hangár Bistro - robots.txt
+
+User-agent: *
+Allow: /
+
+# Köszönjük oldal (thank you page) ne legyen indexelve
+Disallow: /koszonjuk.html
+
+# Sitemap helye
+Sitemap: https://hangarbistro.hu/sitemap.xml

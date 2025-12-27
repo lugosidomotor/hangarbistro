@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itallap | Hangár Bistro - Borok, Koktélok, Italok</title>
+  <meta name="description"
+    content="Válogatott borok, kézműves koktélok és prémium italok. Egyedi italválasztékot állítunk össze rendezvényedhez.">
+  <link rel="canonical" href="https://hangarbistro.hu/itallap.html">
+  <meta name="theme-color" content="#F8F7F3">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+
+  <style>
+    .menu-category {
+      margin-bottom: var(--space-12);
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: var(--glass-blur);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      box-shadow: var(--glass-shadow);
+    }
+
+    .menu-category__title {
+      font-size: var(--font-size-2xl);
+      text-align: center;
+      margin-bottom: var(--space-8);
+      color: var(--color-accent);
+      position: relative;
+      padding-bottom: var(--space-3);
+    }
+
+    .menu-category__title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: var(--color-accent);
+      border-radius: var(--radius-full);
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--space-4);
+      margin-bottom: var(--space-4);
+      padding-bottom: var(--space-4);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+
+    .menu-item__info {
+      flex: 1;
+    }
+
+    .menu-item__name {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-1);
+    }
+
+    .menu-item__description {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    .menu-item__price {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-accent);
+      white-space: nowrap;
+    }
+
+    .menu-note {
+      background: var(--color-bg-tertiary);
+      padding: var(--space-6);
+      border-radius: var(--radius-base);
+      margin-top: var(--space-8);
+      text-align: center;
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      border: 1px solid var(--glass-border);
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
+
+  <header class="navbar">
+    <div class="container navbar__container">
+      <a href="/" class="navbar__logo">
+        <img src="/assets/images/logo.png" alt="Hangár Bistro logó" width="150" height="50">
+      </a>
+      <nav class="navbar__menu" aria-label="Főmenü">
+        <a href="/" class="navbar__link">Főoldal</a>
+        <a href="/rendezvények.html" class="navbar__link">Rendezvények</a>
+        <a href="/etlap.html" class="navbar__link">Étlap</a>
+        <a href="/itallap.html" class="navbar__link navbar__link--active">Itallap</a>
+        <a href="/#kapcsolat" class="navbar__link">Kapcsolat</a>
+      </nav>
+      <a href="/#kapcsolat" class="btn btn-primary navbar__cta">Ajánlatkérés</a>
+      <button class="navbar__toggle" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="navbar__mobile" id="mobile-menu" aria-hidden="true">
+      <div class="navbar__mobile-header">
+        <img src="/assets/images/logo.png" alt="Hangár Bistro" style="height: 34px;">
+        <button class="navbar__mobile-close" aria-label="Menü bezárása">×</button>
+      </div>
+      <div class="navbar__mobile-menu">
+        <a href="/" class="navbar__mobile-link">Főoldal</a>
+        <a href="/rendezvények.html" class="navbar__mobile-link">Rendezvények</a>
+        <a href="/etlap.html" class="navbar__mobile-link">Étlap</a>
+        <a href="/itallap.html" class="navbar__mobile-link navbar__mobile-link--active">Itallap</a>
+        <a href="/#kapcsolat" class="navbar__mobile-link">Kapcsolat</a>
+      </div>
+      <a href="/#kapcsolat" class="btn btn-primary btn-block">Ajánlatkérés</a>
+    </nav>
+    <div class="navbar__backdrop"></div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h1 class="section__title">Itallapunk</h1>
+          <p class="section__subtitle">
+            Válogatott borok, kézműves koktélok és prémium italok. Rendezvényedre egyedi italválasztékot állítunk össze.
+          </p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+
+          <!-- Fehérborok -->
+          <div class="menu-category">
+            <h2 class="menu-category__title">Fehérborok</h2>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Tokaji Furmint</div>
+                <div class="menu-item__description">Száraz, gyümölcsös, minerális - 0,75l</div>
+              </div>
+              <div class="menu-item__price">6 500 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Badacsonyi Olaszrizling</div>
+                <div class="menu-item__description">Friss, élénk savakkal - 0,75l</div>
+              </div>
+              <div class="menu-item__price">5 800 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Etyeki Chardonnay</div>
+                <div class="menu-item__description">Testes, vaníliás, barackos - 0,75l</div>
+              </div>
+              <div class="menu-item__price">7 200 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Sauvignon Blanc</div>
+                <div class="menu-item__description">Elegant, citrusos, fűszeres - 0,75l</div>
+              </div>
+              <div class="menu-item__price">6 900 Ft</div>
+            </div>
+          </div>
+
+          <!-- Vörösborok -->
+          <div class="menu-category">
+            <h2 class="menu-category__title">Vörösborok</h2>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Egri Bikavér</div>
+                <div class="menu-item__description">Klasszikus cuvée, testes, fűszeres - 0,75l</div>
+              </div>
+              <div class="menu-item__price">6 800 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Villányi Cabernet Franc</div>
+                <div class="menu-item__description">Elegáns, gyümölcsös, hosszú lecsengésű - 0,75l</div>
+              </div>
+              <div class="menu-item__price">8 500 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Szekszárdi Kékfrankos</div>
+                <div class="menu-item__description">Közepes testű, fűszeres, gyümölcsös - 0,75l</div>
+              </div>
+              <div class="menu-item__price">6 200 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Pinot Noir</div>
+                <div class="menu-item__description">Selymes, piros bogyós, elegáns - 0,75l</div>
+              </div>
+              <div class="menu-item__price">7 800 Ft</div>
+            </div>
+          </div>
+
+          <!-- Pezsgők -->
+          <div class="menu-category">
+            <h2 class="menu-category__title">Pezsgők & Champagne</h2>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Törley Charmant</div>
+                <div class="menu-item__description">Félszáraz magyar pezsgő - 0,75l</div>
+              </div>
+              <div class="menu-item__price">3 500 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Hungária Grande Cuvée</div>
+                <div class="menu-item__description">Száraz, elegáns pezsgő - 0,75l</div>
+              </div>
+              <div class="menu-item__price">5 200 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Prosecco Spumante</div>
+                <div class="menu-item__description">Olasz klasszikus, gyümölcsös - 0,75l</div>
+              </div>
+              <div class="menu-item__price">6 800 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Moët & Chandon Brut</div>
+                <div class="menu-item__description">Francia Champagne - 0,75l</div>
+              </div>
+              <div class="menu-item__price">24 500 Ft</div>
+            </div>
+          </div>
+
+          <!-- Koktélok -->
+          <div class="menu-category">
+            <h2 class="menu-category__title">Kézműves Koktélok</h2>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Mojito</div>
+                <div class="menu-item__description">Fehér rum, menta, lime, szóda</div>
+              </div>
+              <div class="menu-item__price">2 200 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Aperol Spritz</div>
+                <div class="menu-item__description">Aperol, pezsgő, szóda, narancs</div>
+              </div>
+              <div class="menu-item__price">2 400 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Whisky Sour</div>
+                <div class="menu-item__description">Bourbon, citromlé, cukorsirup, tojásfehérje</div>
+              </div>
+              <div class="menu-item__price">2 800 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Negroni</div>
+                <div class="menu-item__description">Gin, Campari, vörös vermut</div>
+              </div>
+              <div class="menu-item__price">2 600 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Espresso Martini</div>
+                <div class="menu-item__description">Vodka, kávélikőr, friss espresso</div>
+              </div>
+              <div class="menu-item__price">2 700 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Hugo</div>
+                <div class="menu-item__description">Bodza szirup, menta, lime, pezsgő</div>
+              </div>
+              <div class="menu-item__price">2 100 Ft</div>
+            </div>
+          </div>
+
+          <!-- Üdítők & Kávé -->
+          <div class="menu-category">
+            <h2 class="menu-category__title">Üdítők & Kávék</h2>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Coca-Cola, Fanta, Sprite</div>
+                <div class="menu-item__description">0,33l</div>
+              </div>
+              <div class="menu-item__price">650 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Frissen facsart gyümölcslé</div>
+                <div class="menu-item__description">Narancs vagy grapefruit - 3dl</div>
+              </div>
+              <div class="menu-item__price">1 200 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Házi limonádék</div>
+                <div class="menu-item__description">Citrom, málna, vagy eper ízben - 4dl</div>
+              </div>
+              <div class="menu-item__price">950 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Ásványvíz</div>
+                <div class="menu-item__description">Szénsavas vagy szénsavmentes - 0,33l</div>
+              </div>
+              <div class="menu-item__price">450 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Espresso / Americano</div>
+                <div class="menu-item__description">Prémium kávészemekből</div>
+              </div>
+              <div class="menu-item__price">650 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Cappuccino / Latte</div>
+                <div class="menu-item__description">Barista által készített</div>
+              </div>
+              <div class="menu-item__price">850 Ft</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <div class="menu-item__name">Forró csoki</div>
+                <div class="menu-item__description">Tejszínhabbal</div>
+              </div>
+              <div class="menu-item__price">900 Ft</div>
+            </div>
+          </div>
+
+          <div class="menu-note">
+            <strong>Megjegyzés:</strong> Rendezvényekre egyedi italcsomagokat állítunk össze!
+            Korlátlan italfogyasztás, welcome drink, boros vacsora - minden lehetséges.
+            Kérj személyre szabott ajánlatot!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="container">
+        <h2 class="cta-banner__title">Egyedi italválasztékot szeretnél?</h2>
+        <p class="cta-banner__subtitle">
+          Minden rendezvényre személyre szabott italcsomagot állítunk össze. Kérj ajánlatot!
+        </p>
+        <div class="cta-banner__actions">
+          <a href="/#kapcsolat" class="btn btn-primary btn-lg">Ajánlatot kérek</a>
+          <a href="/etlap.html" class="btn btn-secondary btn-lg">Étlap megtekintése</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__column">
+          <h3>Kapcsolat</h3>
+          <div class="footer__contact-item"><span>📞</span>
+            <div><a href="tel:+36706577198">+36 70 657 7198</a></div>
+          </div>
+          <div class="footer__contact-item"><span>✉️</span>
+            <div><a href="mailto:info@hangarbistro.hu">info@hangarbistro.hu</a></div>
+          </div>
+          <div class="footer__contact-item"><span>📍</span>
+            <div>Zöldbázis terület<br>Hármashatár-hegy<br>Budapest 1037</div>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h3>Menü</h3>
+          <a href="/etlap.html" class="footer__link">Étlap</a>
+          <a href="/itallap.html" class="footer__link">Itallap</a>
+          <a href="/rendezvények.html" class="footer__link">Rendezvények</a>
+        </div>
+        <div class="footer__column">
+          <h3>Oldaltérkép</h3>
+          <a href="/" class="footer__link">Főoldal</a>
+          <a href="/#kapcsolat" class="footer__link">Kapcsolat</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Hangár Bistro - Étterem és rendezvényhelyszín. Minden jog fenntartva.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/navigation.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+
+</html>
