@@ -49,17 +49,17 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://hangarbistro.hu/">
 
-  <!-- Theme Color - Organic Biomorphic -->
-  <meta name="theme-color" content="#faf8f5">
+  <!-- Theme Color - Luxury Warm -->
+  <meta name="theme-color" content="#FFFBF7">
 
   <!-- Icons -->
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="apple-touch-icon" href="assets/images/logo.png">
 
-  <!-- Fonts - Organic Biomorphic Pairing -->
+  <!-- Fonts - Luxury Minimal Pairing -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/variables.css">
@@ -68,7 +68,6 @@
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/pages.css">
-
 
   <!-- Structured Data - Organization -->
   <script type="application/ld+json">
@@ -116,15 +115,9 @@
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "10:00",
-        "closes": "22:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Saturday", "Sunday"],
-        "opens": "10:00",
-        "closes": "23:00"
+        "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "17:00"
       }
     ],
     "amenityFeature": [
@@ -150,7 +143,7 @@
   }
   </script>
 
-  <!-- Structured Data - WebSite with SearchAction -->
+  <!-- Structured Data - WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -183,7 +176,7 @@
 <body>
   <a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
 
-  <!-- Navigation (loaded from partials/header.html) -->
+  <!-- Navigation -->
   <div id="header-placeholder"></div>
 
   <!-- Main Content -->
@@ -191,23 +184,25 @@
 
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero__mesh"></div>
-      <!-- Floating Decorative Blobs -->
-      <div class="hero__blob hero__blob--1"></div>
-      <div class="hero__blob hero__blob--2"></div>
-      <div class="parallax-layer parallax-layer--bg"></div>
+      <div class="hero__background">
+        <img src="assets/images/hero.jpg" alt="Panoráma a Hármashatár-hegyről" width="1920" height="1080">
+      </div>
       <div class="hero__overlay"></div>
-      <div class="hero__content container">
+      <div class="hero__content">
+        <span class="hero__eyebrow">Étterem & Rendezvényhelyszín</span>
         <h1 class="hero__title">Hangár Bistro</h1>
-        <p class="hero__subtitle">Étterem és rendezvényhelyszín a Hármashatár-hegyen</p>
+        <div class="hero__line"></div>
+        <p class="hero__subtitle">
+          Különleges pillanatok, felejthetetlen helyszínen. A Hármashatár-hegy szívében, Budapest panorámájával.
+        </p>
         <div class="hero__cta">
-          <a href="rendezvenyek/index.html" class="btn btn-primary btn-lg">Rendezvények</a>
-          <a href="etlap.html" class="btn btn-secondary btn-lg">Étlap</a>
+          <a href="rendezvenyek/index.html" class="btn btn-primary">Rendezvények</a>
+          <a href="etlap.html" class="btn btn-secondary">Étlap</a>
         </div>
       </div>
-      <div class="hero__scroll-indicator">
-        <span></span>
-        Fedezd fel
+      <div class="hero__scroll">
+        <span class="hero__scroll-text">Görgess</span>
+        <div class="hero__scroll-line"></div>
       </div>
     </section>
 
@@ -215,39 +210,49 @@
     <section class="section">
       <div class="container">
         <div class="section__header reveal">
-          <h2 class="section__title">A tökéletes helyszín, minden pillanatra</h2>
+          <span class="section__eyebrow">Miért mi?</span>
+          <h2 class="section__title">A tökéletes helyszín</h2>
+          <div class="section__line"></div>
           <p class="section__subtitle">
-            Egy hely, ahol a természet szépsége és a kifinomult vendéglátás harmóniában él.
+            Ahol a természet szépsége és a kifinomult vendéglátás harmóniában él
           </p>
         </div>
 
-        <div class="pillars">
-          <div class="pillar reveal delay-1">
-            <div class="pillar__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/><path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"/></svg>
+        <div class="grid grid--3">
+          <div class="feature reveal delay-1">
+            <div class="feature__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+                <path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"/>
+              </svg>
             </div>
-            <h3 class="pillar__title">Panoráma a város felett</h3>
-            <p class="pillar__description">
+            <h3 class="feature__title">Panoráma</h3>
+            <p class="feature__description">
               A Guckler Károly kilátó tövében, Budapest egyik legszebb panorámájával. Természetközeli környezet, mindössze 20 percre a belvárostól.
             </p>
           </div>
 
-          <div class="pillar reveal delay-2">
-            <div class="pillar__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 22v-2"/><path d="m17 20.66-1-1.73"/><path d="M11 10.27 7 3.34"/><path d="m20.66 17-1.73-1"/><path d="m3.34 7 1.73 1"/><path d="M14 12h8"/><path d="M2 12h2"/><path d="m20.66 7-1.73 1"/><path d="m3.34 17 1.73-1"/><path d="m17 3.34-1 1.73"/><path d="m11 13.73-4 6.93"/></svg>
+          <div class="feature reveal delay-2">
+            <div class="feature__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
             </div>
-            <h3 class="pillar__title">Professzionális szervezés</h3>
-            <p class="pillar__description">
+            <h3 class="feature__title">Professzionális</h3>
+            <p class="feature__description">
               A helyszíntől a cateringen át a legapróbb részletekig gondoskodunk mindenről. Tapasztalt csapatunk biztosítja az esemény sikerét.
             </p>
           </div>
 
-          <div class="pillar reveal delay-3">
-            <div class="pillar__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <div class="feature reveal delay-3">
+            <div class="feature__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              </svg>
             </div>
-            <h3 class="pillar__title">Személyre szabott élmények</h3>
-            <p class="pillar__description">
+            <h3 class="feature__title">Személyre szabott</h3>
+            <p class="feature__description">
               Minden esemény egyedi, ahogy az elképzelések is. Személyre szabott ajánlatainkkal garantáljuk a felejthetetlen pillanatokat.
             </p>
           </div>
@@ -255,11 +260,13 @@
       </div>
     </section>
 
-    <!-- Event Types Section -->
-    <section class="section section--alt">
+    <!-- Events Section -->
+    <section class="section section--cream">
       <div class="container">
         <div class="section__header reveal">
+          <span class="section__eyebrow">Szolgáltatások</span>
           <h2 class="section__title">Rendezvényeink</h2>
+          <div class="section__line"></div>
           <p class="section__subtitle">
             Az intim lánykéréstől a nagyszabású esküvőig – minden különleges alkalomra
           </p>
@@ -267,151 +274,99 @@
 
         <div class="grid grid--3">
           <!-- Esküvő -->
-          <article class="service-card reveal delay-1">
+          <a href="rendezvenyek/eskuvo.html" class="service-card reveal delay-1">
             <div class="service-card__image">
-              <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80"
-                alt="Elegáns esküvő természetes környezetben" width="800" height="600" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80"
+                alt="Elegáns esküvői dekoráció" width="800" height="600" loading="lazy">
+              <div class="service-card__overlay"></div>
             </div>
             <div class="service-card__content">
               <h3 class="service-card__title">Esküvő</h3>
-              <p class="service-card__description">
-                Az életetek legszebb napja megérdemli a legkülönlegesebb helyszínt. Panorámás esküvő, ahogy megálmodtátok.
-              </p>
-              <ul class="service-card__features">
-                <li>Exkluzív helyszínhasználat</li>
-                <li>Személyre szabott menü</li>
-                <li>Dekoráció és virágkötészet</li>
-                <li>Esküvői koordinátor</li>
-              </ul>
-              <div class="service-card__cta">
-                <a href="rendezvenyek/eskuvo.html" class="btn btn-primary btn-block">Részletek</a>
-              </div>
+              <p class="service-card__subtitle">Mesés helyszín az élet legszebb napjára</p>
+              <span class="service-card__arrow">Részletek &rarr;</span>
             </div>
-          </article>
+          </a>
 
           <!-- Lánykérés -->
-          <article class="service-card reveal delay-2">
+          <a href="rendezvenyek/lanykeres.html" class="service-card reveal delay-2">
             <div class="service-card__image">
               <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&q=80"
-                alt="Romantikus lánykérés naplementében" width="800" height="600" loading="lazy">
+                alt="Romantikus naplemente" width="800" height="600" loading="lazy">
+              <div class="service-card__overlay"></div>
             </div>
             <div class="service-card__content">
               <h3 class="service-card__title">Lánykérés</h3>
-              <p class="service-card__description">
-                A tökéletes „igen" pillanatához tökéletes helyszín. Segítünk megteremteni az emlékezetes pillanatot.
-              </p>
-              <ul class="service-card__features">
-                <li>Privát terasz és helyszín</li>
-                <li>Romantikus dekoráció</li>
-                <li>Ínyenc vacsora kettesben</li>
-                <li>Diszkrét fotós szervezése</li>
-              </ul>
-              <div class="service-card__cta">
-                <a href="rendezvenyek/lanykeres.html" class="btn btn-primary btn-block">Részletek</a>
-              </div>
+              <p class="service-card__subtitle">A tökéletes „igen" pillanatához</p>
+              <span class="service-card__arrow">Részletek &rarr;</span>
             </div>
-          </article>
+          </a>
 
           <!-- Csapatépítő -->
-          <article class="service-card reveal delay-3">
+          <a href="rendezvenyek/csapatepites.html" class="service-card reveal delay-3">
             <div class="service-card__image">
-              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80"
-                alt="Csapatépítő program a szabadban" width="800" height="600" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&q=80"
+                alt="Csapatépítő program" width="800" height="600" loading="lazy">
+              <div class="service-card__overlay"></div>
             </div>
             <div class="service-card__content">
               <h3 class="service-card__title">Csapatépítés</h3>
-              <p class="service-card__description">
-                Inspiráló környezet a csapat összetartásának erősítésére. Friss levegő, természet és színvonalas programok.
-              </p>
-              <ul class="service-card__features">
-                <li>Outdoor és indoor terek</li>
-                <li>Kreatív csapatprogramok</li>
-                <li>Prémium catering</li>
-                <li>Technikai felszereltség</li>
-              </ul>
-              <div class="service-card__cta">
-                <a href="rendezvenyek/csapatepites.html" class="btn btn-primary btn-block">Részletek</a>
-              </div>
+              <p class="service-card__subtitle">Inspiráló környezet a csapat összetartásához</p>
+              <span class="service-card__arrow">Részletek &rarr;</span>
             </div>
-          </article>
+          </a>
 
           <!-- Céges rendezvény -->
-          <article class="service-card">
+          <a href="rendezvenyek/ceges-rendezveny.html" class="service-card reveal">
             <div class="service-card__image">
-              <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80" alt="Professzionális céges rendezvény"
-                width="800" height="600" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80"
+                alt="Céges konferencia" width="800" height="600" loading="lazy">
+              <div class="service-card__overlay"></div>
             </div>
             <div class="service-card__content">
               <h3 class="service-card__title">Céges rendezvények</h3>
-              <p class="service-card__description">
-                Konferenciák, üzleti találkozók és céges ünnepségek inspiráló környezetben, professzionális kiszolgálással.
-              </p>
-              <ul class="service-card__features">
-                <li>Modern konferenciaterem</li>
-                <li>Teljes technikai háttér</li>
-                <li>Üzleti catering</li>
-                <li>Egyedi programszervezés</li>
-              </ul>
-              <div class="service-card__cta">
-                <a href="rendezvenyek/ceges-rendezveny.html" class="btn btn-primary btn-block">Részletek</a>
-              </div>
+              <p class="service-card__subtitle">Professzionális környezet üzleti eseményekhez</p>
+              <span class="service-card__arrow">Részletek &rarr;</span>
             </div>
-          </article>
+          </a>
 
           <!-- Születésnap -->
-          <article class="service-card">
+          <a href="rendezvenyek/szuletesnap.html" class="service-card reveal">
             <div class="service-card__image">
-              <img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=800&q=80"
+              <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80"
                 alt="Elegáns születésnapi ünnepség" width="800" height="600" loading="lazy">
+              <div class="service-card__overlay"></div>
             </div>
             <div class="service-card__content">
               <h3 class="service-card__title">Születésnapok</h3>
-              <p class="service-card__description">
-                Kerek évfordulók és jubileumok méltó megünneplésére. Tegyük együtt emlékezetessé a napot.
-              </p>
-              <ul class="service-card__features">
-                <li>Egyedi menükompozíció</li>
-                <li>Tematikus dekoráció</li>
-                <li>Zenei szolgáltatás</li>
-                <li>Fotózási lehetőség</li>
-              </ul>
-              <div class="service-card__cta">
-                <a href="rendezvenyek/szuletesnap.html" class="btn btn-primary btn-block">Részletek</a>
-              </div>
+              <p class="service-card__subtitle">Kerek évfordulók méltó megünneplésére</p>
+              <span class="service-card__arrow">Részletek &rarr;</span>
             </div>
-          </article>
+          </a>
 
           <!-- Családi rendezvények -->
-          <article class="service-card">
+          <a href="rendezvenyek/csaladi-osszejovetel.html" class="service-card reveal">
             <div class="service-card__image">
-              <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80"
-                alt="Meghitt családi összejövetel" width="800" height="600" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&q=80"
+                alt="Családi ünnep" width="800" height="600" loading="lazy">
+              <div class="service-card__overlay"></div>
             </div>
             <div class="service-card__content">
               <h3 class="service-card__title">Családi ünnepek</h3>
-              <p class="service-card__description">
-                Keresztelők, ballagások, évfordulók – minden családi alkalomra ideális, meghitt helyszín.
-              </p>
-              <ul class="service-card__features">
-                <li>Családbarát környezet</li>
-                <li>Gyermeksarok kialakítása</li>
-                <li>Rugalmas menüválaszték</li>
-                <li>Terasz használata</li>
-              </ul>
-              <div class="service-card__cta">
-                <a href="rendezvenyek/csaladi-osszejovetel.html" class="btn btn-primary btn-block">Részletek</a>
-              </div>
+              <p class="service-card__subtitle">Meghitt pillanatok a szeretteiddel</p>
+              <span class="service-card__arrow">Részletek &rarr;</span>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Étlap & Itallap CTA -->
+    <!-- Culinary Section -->
     <section class="section">
       <div class="container">
         <div class="section__header reveal">
+          <span class="section__eyebrow">Gasztronómia</span>
           <h2 class="section__title">Kulináris élmények</h2>
+          <div class="section__line"></div>
           <p class="section__subtitle">
             Válogatott alapanyagok, gondos elkészítés, emlékezetes ízek
           </p>
@@ -420,111 +375,117 @@
         <div class="grid grid--2">
           <div class="card reveal delay-1">
             <div class="card__image">
-              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Ínyenc fogások az étlapunkról" width="800"
-                height="600" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
+                alt="Fine dining fogás" width="800" height="533" loading="lazy">
             </div>
             <div class="card__content">
+              <span class="card__eyebrow">Ételek</span>
               <h3 class="card__title">Étlapunk</h3>
               <p class="card__description">
-                Szezonális alapanyagokból készült fogások, a hagyományos és a modern konyha találkozásában.
+                Szezonális alapanyagokból készült fogások, a hagyományos és modern konyha találkozásában.
               </p>
-              <a href="etlap.html" class="btn btn-primary">Étlap megtekintése</a>
+              <a href="etlap.html" class="card__link">Étlap megtekintése</a>
             </div>
           </div>
 
           <div class="card reveal delay-2">
             <div class="card__image">
-              <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80" alt="Válogatott borok és italok"
-                width="800" height="600" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80"
+                alt="Válogatott borok" width="800" height="533" loading="lazy">
             </div>
             <div class="card__content">
+              <span class="card__eyebrow">Italok</span>
               <h3 class="card__title">Itallapunk</h3>
               <p class="card__description">
                 Válogatott hazai és nemzetközi borok, signature koktélok és prémium üdítők.
               </p>
-              <a href="itallap.html" class="btn btn-primary">Itallap megtekintése</a>
+              <a href="itallap.html" class="card__link">Itallap megtekintése</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Kapcsolat + Nyitvatartás -->
-    <section class="section section--alt" id="kapcsolat">
+    <!-- Contact Section -->
+    <section class="section section--sand" id="kapcsolat">
       <div class="container">
         <div class="section__header reveal">
+          <span class="section__eyebrow">Elérhetőség</span>
           <h2 class="section__title">Látogasson el hozzánk</h2>
+          <div class="section__line"></div>
           <p class="section__subtitle">
             Szívesen válaszolunk kérdéseire és segítünk megtervezni eseményét
           </p>
         </div>
 
-        <div class="contact-methods reveal">
-          <div class="contact-method">
-            <div class="contact-method__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div class="grid grid--3 reveal">
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
             </div>
-            <h3 class="contact-method__title">Telefon</h3>
-            <p class="contact-method__link">
-              <a href="tel:+36706577198">+36 70 657 7198</a>
-            </p>
-            <p class="contact-method__note">
-              Munkanapokon 9:00–17:00
-            </p>
+            <div class="contact-item__content">
+              <span class="contact-item__label">Telefon</span>
+              <p class="contact-item__value">
+                <a href="tel:+36706577198">+36 70 657 7198</a>
+              </p>
+            </div>
           </div>
 
-          <div class="contact-method">
-            <div class="contact-method__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
             </div>
-            <h3 class="contact-method__title">Email</h3>
-            <p class="contact-method__link">
-              <a href="mailto:info@hangarbistro.hu">info@hangarbistro.hu</a>
-            </p>
-            <p class="contact-method__note">
-              24 órán belül válaszolunk
-            </p>
+            <div class="contact-item__content">
+              <span class="contact-item__label">Email</span>
+              <p class="contact-item__value">
+                <a href="mailto:info@hangarbistro.hu">info@hangarbistro.hu</a>
+              </p>
+            </div>
           </div>
 
-          <div class="contact-method">
-            <div class="contact-method__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
             </div>
-            <h3 class="contact-method__title">Helyszín</h3>
-            <p class="contact-method__address">
-              Zöldbázis terület<br>
-              Hármashatár-hegy<br>
-              Budapest 1037
-            </p>
+            <div class="contact-item__content">
+              <span class="contact-item__label">Helyszín</span>
+              <p class="contact-item__value">
+                Hármashatár-hegy<br>Budapest 1037
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="grid grid--2 contact-info-grid reveal">
-          <div class="opening-hours">
-            <h3 class="opening-hours__title">Nyitvatartás</h3>
-            <ul class="opening-hours__list">
-              <li class="opening-hours__item">
-                <span class="opening-hours__day">Hétfő – Kedd</span>
-                <span class="opening-hours__time opening-hours__time--closed">Zárva</span>
+        <div class="grid grid--2 reveal" style="margin-top: var(--space-10);">
+          <div class="hours">
+            <h3 class="hours__title">Nyitvatartás</h3>
+            <ul class="hours__list">
+              <li class="hours__item">
+                <span class="hours__day">Hétfő – Kedd</span>
+                <span class="hours__time hours__time--closed">Zárva</span>
               </li>
-              <li class="opening-hours__item">
-                <span class="opening-hours__day">Szerda – Vasárnap</span>
-                <span class="opening-hours__time">11:00 – 17:00</span>
+              <li class="hours__item">
+                <span class="hours__day">Szerda – Vasárnap</span>
+                <span class="hours__time">11:00 – 17:00</span>
               </li>
             </ul>
-            <p class="opening-hours__note">
-              Rendezvények esetén egyedi nyitvatartással várjuk vendégeinket.
-            </p>
           </div>
 
-          <div class="location-map">
+          <div class="map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21442.87!2d19.0124!3d47.5698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDM0JzExLjMiTiAxOcKwMDAnNDQuNiJF!5e0!3m2!1shu!2shu!4v1234567890"
-              width="100%" height="450" style="border:0; border-radius: var(--radius-xl);" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade" title="Hangár Bistro elhelyezkedése térképen"></iframe>
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Hangár Bistro térképen"></iframe>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -536,58 +497,66 @@
           Kérjen személyre szabott ajánlatot, és valósítsuk meg együtt az elképzeléseit.
         </p>
         <div class="cta-banner__actions">
-          <a href="#kapcsolat" class="btn btn-primary btn-lg">Ajánlatot kérek</a>
-          <a href="tel:+36706577198" class="btn btn-secondary btn-lg">+36 70 657 7198</a>
+          <a href="mailto:info@hangarbistro.hu?subject=Ajánlatkérés – Hangár Bistro" class="btn btn-primary">Ajánlatot kérek</a>
+          <a href="tel:+36706577198" class="btn btn-secondary">+36 70 657 7198</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer (loaded from partials/footer.html) -->
+  <!-- Footer -->
   <div id="footer-placeholder"></div>
 
   <!-- Scripts -->
   <script src="assets/js/partials.js"></script>
   <script>
-    // Smooth hero parallax effect
+    // Navbar scroll effect
     (function () {
       'use strict';
-
       const navbar = document.querySelector('.navbar');
-      const hero = document.querySelector('.hero');
-      const bgLayer = document.querySelector('.parallax-layer--bg');
-      if (!navbar && (!hero || !bgLayer)) return;
+      if (!navbar) return;
 
       let ticking = false;
 
-      function update() {
+      function updateNavbar() {
         ticking = false;
-
-        if (navbar) {
-          if (window.scrollY > 50) navbar.classList.add('navbar--scrolled');
-          else navbar.classList.remove('navbar--scrolled');
+        if (window.scrollY > 50) {
+          navbar.classList.add('navbar--scrolled');
+        } else {
+          navbar.classList.remove('navbar--scrolled');
         }
-
-        if (!hero || !bgLayer) return;
-
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
-        const heroHeight = Math.max(1, hero.offsetHeight);
-        const clamped = Math.min(scrollTop, heroHeight);
-        const y = clamped * 0.32;
-
-        bgLayer.style.transform = `translate3d(0, ${y}px, 0) scale(1.1)`;
       }
 
       function requestTick() {
         if (ticking) return;
         ticking = true;
-        window.requestAnimationFrame(update);
+        window.requestAnimationFrame(updateNavbar);
       }
 
       window.addEventListener('scroll', requestTick, { passive: true });
-      window.addEventListener('resize', requestTick);
       requestTick();
+    })();
+
+    // Scroll reveal
+    (function () {
+      'use strict';
+      const reveals = document.querySelectorAll('.reveal');
+      if (!reveals.length) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      reveals.forEach(el => observer.observe(el));
     })();
   </script>
   <script src="assets/js/navigation.js" defer></script>

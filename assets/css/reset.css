@@ -108,7 +108,7 @@ a {
 
 /* Focus styles (accessibility) */
 :focus-visible {
-  outline: 3px solid var(--color-sage, #8fa68f);
+  outline: 3px solid var(--color-primary, #C67D5E);
   outline-offset: 2px;
 }
 
