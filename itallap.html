@@ -216,6 +216,40 @@
         align-self: flex-end;
       }
     }
+
+    /* Enhanced mobile styles */
+    @media (max-width: 767px) {
+      .menu-category {
+        padding: var(--space-5);
+        margin-bottom: var(--space-8);
+        border-radius: var(--radius-xl);
+      }
+
+      .menu-category__title {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--space-5);
+      }
+
+      .menu-item {
+        padding-bottom: var(--space-3);
+        margin-bottom: var(--space-3);
+      }
+
+      .menu-item__name {
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-semibold);
+      }
+
+      .menu-item__description {
+        font-size: var(--font-size-sm);
+        line-height: 1.6;
+      }
+
+      .menu-item__price {
+        font-size: var(--font-size-base);
+        padding: 6px 12px;
+      }
+    }
   </style>
 </head>
 
