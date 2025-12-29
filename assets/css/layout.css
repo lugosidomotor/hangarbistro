@@ -387,16 +387,19 @@
   filter: brightness(1.05) saturate(1.1);
 }
 
-/* Organic Overlay */
+/* Premium Elegant Overlay */
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(250, 248, 245, 0.3) 0%,
-    rgba(250, 248, 245, 0.6) 50%,
-    rgba(250, 248, 245, 0.8) 100%
-  );
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(168, 196, 166, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(201, 169, 98, 0.06) 0%, transparent 50%),
+    linear-gradient(
+      180deg,
+      rgba(253, 252, 250, 0.4) 0%,
+      rgba(253, 252, 250, 0.65) 40%,
+      rgba(253, 252, 250, 0.85) 100%
+    );
   z-index: 1;
 }
 
@@ -405,19 +408,31 @@
   position: relative;
   z-index: 2;
   max-width: 900px;
-  padding: var(--space-6);
+  padding: var(--space-8);
 }
 
-/* Organic Hero Title */
+/* Premium Hero Title */
 .hero__title {
   font-size: var(--font-size-hero);
   font-family: var(--font-display);
-  font-weight: var(--font-weight-regular);
-  margin-bottom: var(--space-4);
-  line-height: 1;
-  letter-spacing: var(--letter-spacing-tight);
+  font-weight: var(--font-weight-light);
+  margin-bottom: var(--space-5);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   color: var(--color-text);
-  animation: fade-in-up 1s var(--ease-out-expo) 0.2s both;
+  animation: fade-in-up 1.2s var(--ease-out-expo) 0.2s both;
+}
+
+/* Elegant accent for title */
+.hero__title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-sage), var(--color-gold));
+  margin: var(--space-5) auto 0;
+  border-radius: var(--radius-full);
+  animation: fade-in-up 1.2s var(--ease-out-expo) 0.5s both;
 }
 
 .hero__subtitle {
@@ -426,18 +441,19 @@
   color: var(--color-text-muted);
   margin-bottom: var(--space-10);
   line-height: var(--line-height-relaxed);
-  max-width: 600px;
+  max-width: 550px;
   margin-left: auto;
   margin-right: auto;
-  animation: fade-in-up 1s var(--ease-out-expo) 0.4s both;
+  animation: fade-in-up 1.2s var(--ease-out-expo) 0.5s both;
+  font-weight: var(--font-weight-regular);
 }
 
 .hero__cta {
   display: flex;
-  gap: var(--space-4);
+  gap: var(--space-5);
   justify-content: center;
   flex-wrap: wrap;
-  animation: fade-in-up 1s var(--ease-out-expo) 0.6s both;
+  animation: fade-in-up 1.2s var(--ease-out-expo) 0.7s both;
 }
 
 @media (max-width: 520px) {

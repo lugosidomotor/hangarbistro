@@ -4,33 +4,39 @@
    ================================ */
 
 :root {
-  /* ========== LIVING EARTH PALETTE ========== */
+  /* ========== REFINED EARTH PALETTE - Premium & Elegant ========== */
 
-  /* Primary Backgrounds */
-  --color-bg: #faf8f5;
-  --color-bg-alt: #f0ebe3;
-  --color-bg-warm: #f5f0e6;
+  /* Primary Backgrounds - Warmer, more luxurious */
+  --color-bg: #fdfcfa;
+  --color-bg-alt: #f7f4ef;
+  --color-bg-warm: #f9f6f1;
   --color-bg-card: #ffffff;
+  --color-bg-dark: #2c2825;
 
-  /* Text Colors */
-  --color-text: #2d2a26;
-  --color-text-muted: #6b6560;
-  --color-text-light: #8a8580;
+  /* Text Colors - Better contrast */
+  --color-text: #1a1815;
+  --color-text-muted: #5c574f;
+  --color-text-light: #7d776d;
 
-  /* Living Earth Colors */
-  --color-sage: #8fa68f;
-  --color-sage-light: #b8ccb8;
-  --color-sage-dark: #6b8b6b;
-  --color-clay: #c67d5a;
-  --color-clay-light: #e8a889;
-  --color-clay-dark: #a85c3a;
-  --color-sand: #d4c4a8;
-  --color-sand-light: #e8dcc8;
-  --color-moss: #7a9a6a;
-  --color-moss-light: #a8c898;
-  --color-cream: #f5f0e6;
-  --color-terracotta: #c67d5a;
-  --color-terracotta-light: #e8a889;
+  /* Living Earth Colors - Richer, more sophisticated */
+  --color-sage: #7a9878;
+  --color-sage-light: #a8c4a6;
+  --color-sage-dark: #5a7858;
+  --color-clay: #c4735a;
+  --color-clay-light: #dda08a;
+  --color-clay-dark: #a4533a;
+  --color-sand: #d9c9a5;
+  --color-sand-light: #ebe0c8;
+  --color-moss: #6a8a5a;
+  --color-moss-light: #98b888;
+  --color-cream: #f9f6f1;
+  --color-terracotta: #c4735a;
+  --color-terracotta-light: #dda08a;
+
+  /* New Premium Colors */
+  --color-gold: #c9a962;
+  --color-gold-light: #e0ca8a;
+  --color-charcoal: #3d3833;
 
   /* Accent - Primary is Sage */
   --color-accent: var(--color-sage);
@@ -139,18 +145,20 @@
   --blob-soft: 40% 60% 55% 45% / 55% 45% 50% 50%;
 
 
-  /* ========== SHADOWS - Soft & Organic ========== */
+  /* ========== SHADOWS - Refined & Luxurious ========== */
 
-  --shadow-xs: 0 2px 8px rgba(45, 42, 38, 0.04);
-  --shadow-sm: 0 4px 12px rgba(45, 42, 38, 0.06);
-  --shadow-base: 0 8px 24px rgba(45, 42, 38, 0.08);
-  --shadow-md: 0 12px 32px rgba(45, 42, 38, 0.1);
-  --shadow-lg: 0 20px 48px rgba(45, 42, 38, 0.12);
-  --shadow-xl: 0 32px 64px rgba(45, 42, 38, 0.15);
-  --shadow-glow-sage: 0 8px 32px rgba(143, 166, 143, 0.3);
-  --shadow-glow-clay: 0 8px 32px rgba(198, 125, 90, 0.3);
-  --shadow-card: 0 4px 20px rgba(45, 42, 38, 0.06);
-  --shadow-card-hover: 0 16px 40px rgba(45, 42, 38, 0.12);
+  --shadow-xs: 0 1px 3px rgba(26, 24, 21, 0.04), 0 1px 2px rgba(26, 24, 21, 0.02);
+  --shadow-sm: 0 4px 6px rgba(26, 24, 21, 0.04), 0 2px 4px rgba(26, 24, 21, 0.02);
+  --shadow-base: 0 10px 20px rgba(26, 24, 21, 0.06), 0 4px 8px rgba(26, 24, 21, 0.03);
+  --shadow-md: 0 16px 32px rgba(26, 24, 21, 0.08), 0 6px 12px rgba(26, 24, 21, 0.04);
+  --shadow-lg: 0 24px 48px rgba(26, 24, 21, 0.1), 0 12px 24px rgba(26, 24, 21, 0.05);
+  --shadow-xl: 0 32px 64px rgba(26, 24, 21, 0.12), 0 16px 32px rgba(26, 24, 21, 0.06);
+  --shadow-glow-sage: 0 8px 32px rgba(122, 152, 120, 0.25), 0 4px 16px rgba(122, 152, 120, 0.15);
+  --shadow-glow-clay: 0 8px 32px rgba(196, 115, 90, 0.25), 0 4px 16px rgba(196, 115, 90, 0.15);
+  --shadow-glow-gold: 0 8px 32px rgba(201, 169, 98, 0.25), 0 4px 16px rgba(201, 169, 98, 0.15);
+  --shadow-card: 0 2px 8px rgba(26, 24, 21, 0.04), 0 8px 24px rgba(26, 24, 21, 0.06);
+  --shadow-card-hover: 0 12px 28px rgba(26, 24, 21, 0.1), 0 20px 48px rgba(26, 24, 21, 0.08);
+  --shadow-elegant: 0 25px 50px -12px rgba(26, 24, 21, 0.15);
 
 
   /* ========== TRANSITIONS ========== */
