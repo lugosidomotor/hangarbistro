@@ -158,43 +158,66 @@
   });
 
 
-  // ========== Scroll Animations (using Intersection Observer) ==========
-  const animatedElements = document.querySelectorAll('.section, .card, .service-card, .testimonial');
+  // ========== Scroll Reveal Animations ==========
+  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
 
-  // Keep motion subtle + reliable; also respect reduced-motion
+  // Respect reduced-motion preference
   if ('IntersectionObserver' in window && !prefersReducedMotion) {
-    const animationObserver = new IntersectionObserver(
+    const revealObserver = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            animationObserver.unobserve(entry.target);
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
           }
         });
       },
       {
-        // IMPORTANT: include 0 so very tall sections still become visible on mobile
-        threshold: 0,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -80px 0px'
       }
     );
 
-    animatedElements.forEach(function (element) {
-      // Set initial state
-      element.style.opacity = '0';
-      element.style.transform = 'translateY(20px)';
-      element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-
-      // Observe element
-      animationObserver.observe(element);
+    revealElements.forEach(function (element) {
+      revealObserver.observe(element);
     });
   } else {
-    // Fallback: just show all elements immediately
-    animatedElements.forEach(function (element) {
-      element.style.opacity = '1';
-      element.style.transform = 'translateY(0)';
+    // Fallback: show all elements immediately
+    revealElements.forEach(function (element) {
+      element.classList.add('revealed');
     });
+  }
+
+
+  // ========== Navbar Scroll Effect ==========
+  const navbar = document.querySelector('.navbar');
+
+  if (navbar) {
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', function () {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > 100) {
+        navbar.classList.add('navbar--scrolled');
+      } else {
+        navbar.classList.remove('navbar--scrolled');
+      }
+
+      lastScroll = currentScroll;
+    }, { passive: true });
+  }
+
+
+  // ========== Smooth Parallax for Hero ==========
+  const heroParallax = document.querySelector('.parallax-layer--bg');
+
+  if (heroParallax && !prefersReducedMotion) {
+    window.addEventListener('scroll', function () {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * 0.35;
+      heroParallax.style.transform = `scale(1.1) translateY(${rate}px)`;
+    }, { passive: true });
   }
 
 

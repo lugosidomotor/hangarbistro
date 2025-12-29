@@ -18,7 +18,7 @@
     <link rel="canonical" href="https://hangarbistro.hu/rendezvenyek/ceges-rendezveny.html">
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#F8F7F3">
+    <meta name="theme-color" content="#faf8f5">
 
     <!-- Icons -->
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
@@ -30,7 +30,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/variables.css">
@@ -83,11 +83,64 @@
         "email": "info@hangarbistro.hu"
     }
     </script>
+
+    <!-- Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Főoldal", "item": "https://hangarbistro.hu/"},
+            {"@type": "ListItem", "position": 2, "name": "Rendezvények", "item": "https://hangarbistro.hu/rendezvenyek/"},
+            {"@type": "ListItem", "position": 3, "name": "Céges rendezvény", "item": "https://hangarbistro.hu/rendezvenyek/ceges-rendezveny.html"}
+        ]
+    }
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
-    <!-- Header Placeholder -->
-    <div id="header-placeholder"></div>
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="container navbar__container">
+        <a href="../index.html" class="navbar__logo">
+          <img src="../assets/images/logo.png" alt="Hangár Bistro logó" width="150" height="50">
+        </a>
+
+        <nav class="navbar__menu" aria-label="Főmenü">
+          <a href="../index.html" class="navbar__link" data-page="index">Főoldal</a>
+          <a href="index.html" class="navbar__link navbar__link--active" data-page="rendezvenyek">Rendezvények</a>
+          <a href="../etlap.html" class="navbar__link" data-page="etlap">Étlap</a>
+          <a href="../itallap.html" class="navbar__link" data-page="itallap">Itallap</a>
+          <a href="../index.html#kapcsolat" class="navbar__link">Kapcsolat</a>
+        </nav>
+
+        <a href="mailto:info@hangarbistro.hu?subject=Ajánlatkérés – Hangár Bistro&body=Kedves Hangár Bistro Csapat!%0D%0A%0D%0ARendezvény típusa:%0D%0ADátum:%0D%0ALétszám:%0D%0AIdősáv:%0D%0AMegjegyzés:%0D%0A%0D%0AÜdvözlettel" class="btn btn-primary navbar__cta">Ajánlatkérés</a>
+
+        <button class="navbar__toggle" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav class="navbar__mobile" id="mobile-menu" aria-hidden="true">
+        <div class="navbar__mobile-header">
+          <img src="../assets/images/logo.png" alt="Hangár Bistro" style="height: 34px;">
+          <button class="navbar__mobile-close" aria-label="Menü bezárása">×</button>
+        </div>
+        <div class="navbar__mobile-menu">
+          <a href="../index.html" class="navbar__mobile-link" data-page="index">Főoldal</a>
+          <a href="index.html" class="navbar__mobile-link navbar__mobile-link--active" data-page="rendezvenyek">Rendezvények</a>
+          <a href="../etlap.html" class="navbar__mobile-link" data-page="etlap">Étlap</a>
+          <a href="../itallap.html" class="navbar__mobile-link" data-page="itallap">Itallap</a>
+          <a href="../index.html#kapcsolat" class="navbar__mobile-link">Kapcsolat</a>
+        </div>
+        <a href="mailto:info@hangarbistro.hu?subject=Ajánlatkérés – Hangár Bistro&body=Kedves Hangár Bistro Csapat!%0D%0A%0D%0ARendezvény típusa:%0D%0ADátum:%0D%0ALétszám:%0D%0AIdősáv:%0D%0AMegjegyzés:%0D%0A%0D%0AÜdvözlettel" class="btn btn-primary btn-block">Ajánlatkérés</a>
+      </nav>
+
+      <div class="navbar__backdrop"></div>
+    </header>
 
     <main id="main-content">
     <!-- Hero Section -->

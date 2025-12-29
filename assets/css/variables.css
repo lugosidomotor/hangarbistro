@@ -1,92 +1,97 @@
 /* ================================
-   HANGÁR BISTRO - DESIGN TOKENS
+   HANGÁR BISTRO - ORGANIC BIOMORPHIC
+   Living Earth Design System
    ================================ */
 
 :root {
-  /* ========== COLOR PALETTE ========== */
-  /* Elegant Daylight - Bright, Clean, Premium */
+  /* ========== LIVING EARTH PALETTE ========== */
 
-  /* Backgrounds */
-  --color-bg-primary: #F8F7F3;
-  --color-bg-secondary: #FFFFFF;
-  --color-bg-tertiary: #F1F3EF;
+  /* Primary Backgrounds */
+  --color-bg: #faf8f5;
+  --color-bg-alt: #f0ebe3;
+  --color-bg-warm: #f5f0e6;
+  --color-bg-card: #ffffff;
 
   /* Text Colors */
-  --color-text-primary: #101614;
-  --color-text-secondary: #33403B;
-  --color-text-muted: #6B7872;
-  --color-text-dark: #0B0F0D;
+  --color-text: #2d2a26;
+  --color-text-muted: #6b6560;
+  --color-text-light: #8a8580;
 
-  /* Accent - Champagne Gold */
-  --color-accent: #C9A463;
-  --color-accent-hover: #D4B475;
-  --color-accent-light: #F2D9A7;
-  --color-accent-glow: rgba(201, 164, 99, 0.28);
+  /* Living Earth Colors */
+  --color-sage: #8fa68f;
+  --color-sage-light: #b8ccb8;
+  --color-sage-dark: #6b8b6b;
+  --color-clay: #c67d5a;
+  --color-clay-light: #e8a889;
+  --color-clay-dark: #a85c3a;
+  --color-sand: #d4c4a8;
+  --color-sand-light: #e8dcc8;
+  --color-moss: #7a9a6a;
+  --color-moss-light: #a8c898;
+  --color-cream: #f5f0e6;
+  --color-terracotta: #c67d5a;
+  --color-terracotta-light: #e8a889;
 
-  /* Glassmorphism Tokens */
-  --glass-bg: rgba(255, 255, 255, 0.72);
-  --glass-border: rgba(16, 22, 20, 0.10);
-  --glass-blur: blur(16px);
-  --glass-shadow: 0 10px 40px rgba(16, 22, 20, 0.10);
+  /* Accent - Primary is Sage */
+  --color-accent: var(--color-sage);
+  --color-accent-hover: var(--color-sage-dark);
+  --color-accent-light: var(--color-sage-light);
+  --color-accent-secondary: var(--color-clay);
 
-  /* Neutrals */
-  --color-white: #FFFFFF;
-  --color-black: #000000;
-
-  /* Legacy color mappings for compatibility */
-  --color-primary: #2D5016;
-  --color-primary-light: #3D6B20;
-  --color-primary-dark: #1A3309;
-  --color-secondary: var(--color-accent);
-
-  /* Grays */
-  --color-gray-100: #F3F5F3;
-  --color-gray-200: #E7EBE8;
-  --color-gray-300: #D4DBD7;
-  --color-gray-400: #A7B2AC;
-  --color-gray-500: #6B7872;
-  --color-gray-600: #4B5A54;
-  --color-gray-700: #2B3531;
-  --color-gray-800: #101614;
-  --color-light: #F1F3EF;
+  /* Legacy Support */
+  --color-white: #ffffff;
+  --color-black: #2d2a26;
+  --color-primary: var(--color-sage);
+  --color-primary-light: var(--color-sage-light);
+  --color-primary-dark: var(--color-sage-dark);
+  --color-secondary: var(--color-clay);
+  --color-border: rgba(107, 101, 96, 0.15);
+  --color-border-light: rgba(107, 101, 96, 0.08);
 
   /* Semantic Colors */
-  --color-success: #4CAF50;
-  --color-error: #FF5252;
-  --color-warning: #FFAB40;
-  --color-info: #40C4FF;
+  --color-success: #6b9a5a;
+  --color-error: #c65a5a;
+  --color-warning: #c9a052;
+  --color-info: #5a8ac6;
 
 
   /* ========== TYPOGRAPHY ========== */
 
-  /* Font Families */
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Montserrat', sans-serif;
+  /* Font Families - Organic Pairing */
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-heading: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Karla', 'Helvetica Neue', sans-serif;
+  --font-accent: 'Fraunces', serif;
 
-  /* Font Sizes - Refined Fluid Typography */
-  --font-size-xs: clamp(0.75rem, 0.05vw + 0.74rem, 0.8rem);
-  --font-size-sm: clamp(0.875rem, 0.13vw + 0.85rem, 1rem);
-  --font-size-base: clamp(1rem, 0.2vw + 0.95rem, 1.125rem);
-  --font-size-lg: clamp(1.125rem, 0.4vw + 1.03rem, 1.375rem);
-  --font-size-xl: clamp(1.25rem, 0.7vw + 1.15rem, 1.75rem);
-  --font-size-2xl: clamp(1.5rem, 1.2vw + 1.3rem, 2.5rem);
-  --font-size-3xl: clamp(2rem, 2vw + 1.6rem, 3.5rem);
-  --font-size-4xl: clamp(2.5rem, 4vw + 1.5rem, 5.5rem);
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: clamp(1.875rem, 3vw + 0.5rem, 2.5rem);
+  --font-size-4xl: clamp(2.25rem, 4vw + 0.5rem, 3.5rem);
+  --font-size-hero: clamp(3rem, 6vw + 1rem, 5rem);
 
   /* Font Weights */
+  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --font-weight-black: 900;
 
   /* Line Heights */
   --line-height-tight: 1.15;
-  --line-height-base: 1.6;
-  --line-height-relaxed: 1.75;
+  --line-height-snug: 1.35;
+  --line-height-base: 1.65;
+  --line-height-relaxed: 1.8;
 
   /* Letter Spacing */
   --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+  --letter-spacing-wider: 0.08em;
 
 
   /* ========== SPACING ========== */
@@ -106,43 +111,60 @@
   --space-24: 12rem;
 
   /* Container Widths */
-  --container-sm: 768px;
-  --container-md: 1024px;
-  --container-lg: 1280px;
-  --container-xl: 1440px;
-
-  /* Readability */
-  --content-width: 720px;
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1200px;
+  --container-2xl: 1400px;
 
 
-  /* ========== BORDER RADIUS ========== */
+  /* ========== ORGANIC BORDER RADIUS ========== */
 
-  --radius-sm: 0.375rem;
-  --radius-base: 0.75rem;
-  --radius-lg: 1.25rem;
-  --radius-xl: 2rem;
+  /* Simple Organic */
+  --radius-sm: 12px;
+  --radius-base: 20px;
+  --radius-lg: 30px;
+  --radius-xl: 40px;
+  --radius-2xl: 60px;
   --radius-full: 9999px;
 
+  /* Blob Shapes - Asymmetric Border Radius */
+  --blob-1: 50% 40% 60% 50% / 50% 60% 40% 50%;
+  --blob-2: 40% 60% 50% 50% / 60% 40% 50% 50%;
+  --blob-3: 60% 50% 40% 50% / 40% 50% 60% 50%;
+  --blob-4: 50% 50% 60% 40% / 50% 50% 40% 60%;
+  --blob-5: 45% 55% 50% 50% / 55% 45% 55% 45%;
+  --blob-button: 50px 20px 50px 20px / 30px 40px 30px 40px;
+  --blob-card: 30% 70% 60% 40% / 50% 40% 60% 50%;
+  --blob-soft: 40% 60% 55% 45% / 55% 45% 50% 50%;
 
-  /* ========== SHADOWS ========== */
 
-  --shadow-sm: 0 2px 4px rgba(16, 22, 20, 0.06);
-  --shadow-base: 0 4px 12px rgba(16, 22, 20, 0.08);
-  --shadow-md: 0 8px 24px rgba(16, 22, 20, 0.12);
-  --shadow-lg: 0 16px 48px rgba(16, 22, 20, 0.14);
-  --shadow-xl: 0 24px 64px rgba(16, 22, 20, 0.18);
-  --shadow-glow: 0 0 18px var(--color-accent-glow);
+  /* ========== SHADOWS - Soft & Organic ========== */
+
+  --shadow-xs: 0 2px 8px rgba(45, 42, 38, 0.04);
+  --shadow-sm: 0 4px 12px rgba(45, 42, 38, 0.06);
+  --shadow-base: 0 8px 24px rgba(45, 42, 38, 0.08);
+  --shadow-md: 0 12px 32px rgba(45, 42, 38, 0.1);
+  --shadow-lg: 0 20px 48px rgba(45, 42, 38, 0.12);
+  --shadow-xl: 0 32px 64px rgba(45, 42, 38, 0.15);
+  --shadow-glow-sage: 0 8px 32px rgba(143, 166, 143, 0.3);
+  --shadow-glow-clay: 0 8px 32px rgba(198, 125, 90, 0.3);
+  --shadow-card: 0 4px 20px rgba(45, 42, 38, 0.06);
+  --shadow-card-hover: 0 16px 40px rgba(45, 42, 38, 0.12);
 
 
   /* ========== TRANSITIONS ========== */
 
-  --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base: 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 200ms ease;
+  --transition-base: 400ms ease;
+  --transition-slow: 600ms ease;
+  --transition-slower: 800ms ease;
 
-  --ease-in: cubic-bezier(0.4, 0, 1, 1);
-  --ease-out: cubic-bezier(0, 0, 0.2, 1);
-  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  /* Organic Easings */
+  --ease-organic: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
 
   /* ========== Z-INDEX SCALE ========== */
@@ -159,7 +181,6 @@
 
 
   /* ========== BREAKPOINTS ========== */
-  /* Használat media query-ben: @media (min-width: 768px) { ... } */
 
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
@@ -169,8 +190,159 @@
 }
 
 
-/* ========== DARK MODE SUPPORT (későbbi használatra) ========== */
+/* ========== ORGANIC ANIMATIONS ========== */
 
-@media (prefers-color-scheme: dark) {
-  /* Jelenleg nem használjuk, de előkészítve */
+/* Blob Morphing Animation */
+@keyframes blob-morph {
+  0%, 100% {
+    border-radius: var(--blob-1);
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    border-radius: var(--blob-2);
+    transform: rotate(90deg) scale(1.02);
+  }
+  50% {
+    border-radius: var(--blob-3);
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    border-radius: var(--blob-4);
+    transform: rotate(270deg) scale(0.98);
+  }
+}
+
+/* Slow Blob Morph */
+@keyframes blob-morph-slow {
+  0%, 100% {
+    border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+  }
+  33% {
+    border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+  }
+  66% {
+    border-radius: 50% 50% 40% 60% / 40% 50% 50% 60%;
+  }
+}
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Gentle Float */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+/* Breathing Animation */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* Pulse Glow */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(143, 166, 143, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(143, 166, 143, 0.5);
+  }
+}
+
+/* Wave Animation */
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Fade In Up */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Scale In */
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Rotate Slow */
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Gooey Blob */
+@keyframes gooey {
+  0%, 100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

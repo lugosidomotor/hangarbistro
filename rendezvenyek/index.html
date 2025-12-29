@@ -9,20 +9,31 @@
   <title>Rendezvények | Hangár Bistro - Esküvő, Céges Rendezvény, Csapatépítés</title>
   <meta name="description"
     content="Prémium rendezvényhelyszín a Hármashatár-hegyen. Esküvők, lánykérések, céges események, csapatépítések és családi ünnepek egyedi környezetben.">
+  <meta name="keywords" content="rendezvényhelyszín budapest, esküvői helyszín, céges rendezvény helyszín, csapatépítés helyszín, családi ünnep helyszín">
+  <meta name="author" content="Hangár Bistro">
+  <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hangarbistro.hu/rendezvenyek/">
+  <meta property="og:site_name" content="Hangár Bistro">
   <meta property="og:title" content="Rendezvények | Hangár Bistro - Esküvő, Céges Rendezvény, Csapatépítés">
   <meta property="og:description"
     content="Prémium rendezvényhelyszín a Hármashatár-hegyen. Esküvők, lánykérések, céges események és családi ünnepek.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&q=80">
+  <meta property="og:image" content="https://hangarbistro.hu/assets/images/og-image.jpg">
+  <meta property="og:locale" content="hu_HU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rendezvények | Hangár Bistro">
+  <meta name="twitter:description" content="Prémium rendezvényhelyszín a Hármashatár-hegyen - esküvők, céges események, családi ünnepek.">
+  <meta name="twitter:image" content="https://hangarbistro.hu/assets/images/og-image.jpg">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://hangarbistro.hu/rendezvenyek/">
 
   <!-- Theme Color -->
-  <meta name="theme-color" content="#F8F7F3">
+  <meta name="theme-color" content="#faf8f5">
 
   <!-- Icons -->
   <link rel="icon" type="image/png" href="../assets/images/logo.png">
@@ -34,9 +45,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="../assets/css/variables.css">
@@ -85,8 +94,8 @@
   {
     "@context": "https://schema.org",
     "@type": "EventVenue",
-    "name": "Hangár Bistro",
-    "image": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&q=80",
+    "name": "Hangár Bistro - Rendezvényhelyszín",
+    "image": "https://hangarbistro.hu/assets/images/og-image.jpg",
     "url": "https://hangarbistro.hu/rendezvenyek/",
     "telephone": "+36706577198",
     "email": "info@hangarbistro.hu",
@@ -96,7 +105,41 @@
       "addressLocality": "Budapest",
       "postalCode": "1037",
       "addressCountry": "HU"
-    }
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 47.5494,
+      "longitude": 19.0136
+    },
+    "maximumAttendeeCapacity": 120,
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Ingyenes parkolás", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Catering", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Hangosítás", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Dekoráció", "value": true}
+    ]
+  }
+  </script>
+
+  <!-- Structured Data - BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Főoldal",
+        "item": "https://hangarbistro.hu/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Rendezvények",
+        "item": "https://hangarbistro.hu/rendezvenyek/"
+      }
+    ]
   }
   </script>
 </head>
@@ -104,8 +147,48 @@
 <body>
   <a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a>
 
-  <!-- Navigation (loaded from partials/header.html) -->
-  <div id="header-placeholder"></div>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container navbar__container">
+      <a href="../index.html" class="navbar__logo">
+        <img src="../assets/images/logo.png" alt="Hangár Bistro logó" width="150" height="50">
+      </a>
+
+      <nav class="navbar__menu" aria-label="Főmenü">
+        <a href="../index.html" class="navbar__link" data-page="index">Főoldal</a>
+        <a href="index.html" class="navbar__link navbar__link--active" data-page="rendezvenyek">Rendezvények</a>
+        <a href="../etlap.html" class="navbar__link" data-page="etlap">Étlap</a>
+        <a href="../itallap.html" class="navbar__link" data-page="itallap">Itallap</a>
+        <a href="../index.html#kapcsolat" class="navbar__link">Kapcsolat</a>
+      </nav>
+
+      <a href="mailto:info@hangarbistro.hu?subject=Ajánlatkérés – Hangár Bistro&body=Kedves Hangár Bistro Csapat!%0D%0A%0D%0ARendezvény típusa:%0D%0ADátum:%0D%0ALétszám:%0D%0AIdősáv:%0D%0AMegjegyzés:%0D%0A%0D%0AÜdvözlettel" class="btn btn-primary navbar__cta">Ajánlatkérés</a>
+
+      <button class="navbar__toggle" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="navbar__mobile" id="mobile-menu" aria-hidden="true">
+      <div class="navbar__mobile-header">
+        <img src="../assets/images/logo.png" alt="Hangár Bistro" style="height: 34px;">
+        <button class="navbar__mobile-close" aria-label="Menü bezárása">×</button>
+      </div>
+      <div class="navbar__mobile-menu">
+        <a href="../index.html" class="navbar__mobile-link" data-page="index">Főoldal</a>
+        <a href="index.html" class="navbar__mobile-link navbar__mobile-link--active" data-page="rendezvenyek">Rendezvények</a>
+        <a href="../etlap.html" class="navbar__mobile-link" data-page="etlap">Étlap</a>
+        <a href="../itallap.html" class="navbar__mobile-link" data-page="itallap">Itallap</a>
+        <a href="../index.html#kapcsolat" class="navbar__mobile-link">Kapcsolat</a>
+      </div>
+      <a href="mailto:info@hangarbistro.hu?subject=Ajánlatkérés – Hangár Bistro&body=Kedves Hangár Bistro Csapat!%0D%0A%0D%0ARendezvény típusa:%0D%0ADátum:%0D%0ALétszám:%0D%0AIdősáv:%0D%0AMegjegyzés:%0D%0A%0D%0AÜdvözlettel" class="btn btn-primary btn-block">Ajánlatkérés</a>
+    </nav>
+
+    <div class="navbar__backdrop"></div>
+  </header>
 
   <!-- Main Content -->
   <main id="main-content">
@@ -328,7 +411,7 @@
         </div>
 
         <div style="max-width: 800px; margin: 0 auto var(--space-8);">
-          <p style="text-align: center; color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
+          <p style="text-align: center; color: var(--color-text-muted); line-height: var(--line-height-relaxed);">
             A Hangár Bistro a Hármashatár-hegy lábánál található, a Guckler Károly kilátó közelében. Páratlan
             panorámával, természetközeli környezettel és modern infrastruktúrával várjuk vendégeinket. Indoor és
             outdoor teraszaink, valamint professzionális konyánk biztosítja, hogy minden rendezvény tökéletes legyen.
@@ -372,44 +455,44 @@
           <!-- Basic Package -->
           <div class="card">
             <div class="card__content">
-              <h3 class="card__title" style="color: var(--color-accent); margin-bottom: var(--space-3);">Basic</h3>
-              <p style="color: var(--color-text-secondary); margin-bottom: var(--space-6);">
+              <h3 class="card__title" style="color: var(--color-sage); margin-bottom: var(--space-3);">Basic</h3>
+              <p style="color: var(--color-text-muted); margin-bottom: var(--space-6);">
                 Alapszintű rendezvényszervezés kisebb létszámú eseményekhez
               </p>
               <ul style="list-style: none; padding: 0; margin-bottom: var(--space-6);">
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Helyszín bérlet
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Helyszín bérlet
                   (4 óra)</li>
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Alapmenü (3
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Alapmenü (3
                   fogás)</li>
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Asztal és szék
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Asztal és szék
                   bérlet</li>
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Alapdekoráció
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Alapdekoráció
                 </li>
-                <li style="padding: var(--space-2) 0; color: var(--color-text-muted);">✗ Zenei szolgáltatás</li>
+                <li style="padding: var(--space-2) 0; color: var(--color-text-light);">✗ Zenei szolgáltatás</li>
               </ul>
               <a href="tel:+36706577198" class="btn btn-secondary btn-block">Ajánlatot kérek</a>
             </div>
           </div>
 
           <!-- Premium Package -->
-          <div class="card" style="border: 2px solid var(--color-accent); transform: scale(1.05);">
+          <div class="card" style="border: 2px solid var(--color-sage); transform: scale(1.05); box-shadow: var(--shadow-md), var(--shadow-glow-sage);">
             <div class="card__content">
-              <div style="background: var(--color-accent); color: var(--color-text-dark); padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); display: inline-block; margin-bottom: var(--space-3); font-size: var(--font-size-sm); font-weight: var(--font-weight-bold);">
+              <div style="background: linear-gradient(135deg, var(--color-sage), var(--color-sage-dark)); color: var(--color-white); padding: var(--space-1) var(--space-3); border-radius: 20px 10px 20px 10px / 10px 20px 10px 20px; display: inline-block; margin-bottom: var(--space-3); font-size: var(--font-size-sm); font-weight: var(--font-weight-bold);">
                 NÉPSZERŰ
               </div>
-              <h3 class="card__title" style="color: var(--color-accent); margin-bottom: var(--space-3);">Premium</h3>
-              <p style="color: var(--color-text-secondary); margin-bottom: var(--space-6);">
+              <h3 class="card__title" style="color: var(--color-sage); margin-bottom: var(--space-3);">Premium</h3>
+              <p style="color: var(--color-text-muted); margin-bottom: var(--space-6);">
                 Teljes körű rendezvényszervezés minden igénnyel
               </p>
               <ul style="list-style: none; padding: 0; margin-bottom: var(--space-6);">
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Helyszín bérlet
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Helyszín bérlet
                   (8 óra)</li>
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Prémium menü (5
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Prémium menü (5
                   fogás)</li>
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Teljes
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Teljes
                   dekoráció</li>
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ DJ / Élőzene</li>
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Rendezvény
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ DJ / Élőzene</li>
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Rendezvény
                   koordinátor</li>
               </ul>
               <a href="tel:+36706577198" class="btn btn-primary btn-block">Ajánlatot kérek</a>
@@ -419,22 +502,22 @@
           <!-- Exclusive Package -->
           <div class="card">
             <div class="card__content">
-              <h3 class="card__title" style="color: var(--color-accent); margin-bottom: var(--space-3);">Exclusive</h3>
-              <p style="color: var(--color-text-secondary); margin-bottom: var(--space-6);">
+              <h3 class="card__title" style="color: var(--color-clay); margin-bottom: var(--space-3);">Exclusive</h3>
+              <p style="color: var(--color-text-muted); margin-bottom: var(--space-6);">
                 VIP szolgáltatások egyedi, exkluzív rendezvényekhez
               </p>
               <ul style="list-style: none; padding: 0; margin-bottom: var(--space-6);">
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Egész napos
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Egész napos
                   helyszín bérlet</li>
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Exkluzív menü
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Exkluzív menü
                   (séf választék)</li>
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Egyedi
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Egyedi
                   dekoráció & virágdísz</li>
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Élőzene & DJ
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Élőzene & DJ
                 </li>
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Professzionális
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Professzionális
                   fotós & videós</li>
-                <li style="padding: var(--space-2) 0; border-bottom: 1px solid var(--glass-border);">✓ Dedikált
+                <li style="padding: var(--space-2) 0; border-bottom: 1px dashed var(--color-border);">✓ Dedikált
                   koordinátor</li>
               </ul>
               <a href="tel:+36706577198" class="btn btn-secondary btn-block">Ajánlatot kérek</a>
@@ -457,44 +540,44 @@
         <div class="grid grid--2">
           <div class="card testimonial">
             <div class="card__content">
-              <p style="font-style: italic; color: var(--color-text-secondary); margin-bottom: var(--space-4);">
+              <p style="font-style: italic; color: var(--color-text-muted); margin-bottom: var(--space-4);">
                 "Fantasztikus helyszín, lélegzetelállító kilátás! Az esküvőnk minden vendége oda volt a panorámáért és
                 a kiváló kiszolgálásért. Köszönjük a Hangár Bistronak!"
               </p>
-              <p style="font-weight: var(--font-weight-semibold); color: var(--color-text-primary);">— Anna és Péter,
+              <p style="font-weight: var(--font-weight-semibold); color: var(--color-text);">— Anna és Péter,
                 Esküvő 2024</p>
             </div>
           </div>
 
           <div class="card testimonial">
             <div class="card__content">
-              <p style="font-style: italic; color: var(--color-text-secondary); margin-bottom: var(--space-4);">
+              <p style="font-style: italic; color: var(--color-text-muted); margin-bottom: var(--space-4);">
                 "Profi szervezés, rugalmas hozzáállás. Céges rendezvényünket maximálisan kiszolgálták, minden igényünket
                 teljesítették. Csak ajánlani tudom!"
               </p>
-              <p style="font-weight: var(--font-weight-semibold); color: var(--color-text-primary);">— Gábor, Céges
+              <p style="font-weight: var(--font-weight-semibold); color: var(--color-text);">— Gábor, Céges
                 rendezvény</p>
             </div>
           </div>
 
           <div class="card testimonial">
             <div class="card__content">
-              <p style="font-style: italic; color: var(--color-text-secondary); margin-bottom: var(--space-4);">
+              <p style="font-style: italic; color: var(--color-text-muted); margin-bottom: var(--space-4);">
                 "A lánykérésem tökéletes volt! Diszkréten mindent megszerveztek, a párom sírva fakadt a meglepetéstől.
                 Köszönjük ezt a csodát!"
               </p>
-              <p style="font-weight: var(--font-weight-semibold); color: var(--color-text-primary);">— Balázs,
+              <p style="font-weight: var(--font-weight-semibold); color: var(--color-text);">— Balázs,
                 Lánykérés 2024</p>
             </div>
           </div>
 
           <div class="card testimonial">
             <div class="card__content">
-              <p style="font-style: italic; color: var(--color-text-secondary); margin-bottom: var(--space-4);">
+              <p style="font-style: italic; color: var(--color-text-muted); margin-bottom: var(--space-4);">
                 "Remek csapatépítő helyszín! A természeti környezet, az ételek és a professzionális kiszolgálás
                 tökéletes kombinációja."
               </p>
-              <p style="font-weight: var(--font-weight-semibold); color: var(--color-text-primary);">— Eszter, HR
+              <p style="font-weight: var(--font-weight-semibold); color: var(--color-text);">— Eszter, HR
                 vezető</p>
             </div>
           </div>
@@ -662,7 +745,7 @@
         </div>
 
         <div style="max-width: 800px; margin: 0 auto;">
-          <p style="text-align: center; color: var(--color-text-secondary); line-height: var(--line-height-relaxed); margin-bottom: var(--space-8);">
+          <p style="text-align: center; color: var(--color-text-muted); line-height: var(--line-height-relaxed); margin-bottom: var(--space-8);">
             Rendszeresen dolgozol rendezvények szervezésével? Partnerünkké válva exkluzív előnyöket, rugalmas
             feltételeket és fix kapcsolattartót biztosítunk számodra. Legyen szó esküvőkről, céges eseményekről vagy
             magánrendezvényekről, mi vagyunk a megbízható háttér.
@@ -723,7 +806,7 @@
           <a href="mailto:info@hangarbistro.hu?subject=Ajánlatkérés – Rendezvény – Hangár Bistro&body=Kedves Hangár Bistro Csapat!%0D%0A%0D%0ARendezvény típusa:%0D%0ADátum:%0D%0ALétszám:%0D%0AIdősáv:%0D%0AMegjegyzés:%0D%0A%0D%0AÜdvözlettel"
             class="btn btn-secondary btn-lg">Email küldése</a>
         </div>
-        <p style="margin-top: var(--space-4); color: rgba(255,255,255,0.8); font-size: var(--font-size-sm);">
+        <p style="margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--font-size-sm);">
           Válaszidő: 24 óra | Telefonos elérhetőség: hétköznap 9:00-17:00
         </p>
       </div>
