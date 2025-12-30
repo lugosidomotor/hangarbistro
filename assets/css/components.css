@@ -815,30 +815,10 @@
   color: var(--color-white);
 }
 
-/* Mobile: horizontal at bottom */
+/* Mobile: hide share buttons */
 @media (max-width: 768px) {
   .share-buttons {
-    left: 50%;
-    top: auto;
-    bottom: var(--space-20);
-    transform: translateX(-50%);
-    flex-direction: row;
-    background-color: var(--color-white);
-    padding: var(--space-3) var(--space-4);
-    border-radius: var(--radius-full);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .share-buttons__label {
-    writing-mode: horizontal-tb;
-    transform: none;
-    margin-bottom: 0;
-    margin-right: var(--space-2);
-  }
-
-  .share-btn {
-    width: 40px;
-    height: 40px;
+    display: none;
   }
 }
 
@@ -847,8 +827,3 @@
   bottom: calc(var(--space-20) + 80px);
 }
 
-@media (max-width: 768px) {
-  .cookie-banner.is-visible ~ .share-buttons {
-    bottom: calc(var(--space-20) + 120px);
-  }
-}
