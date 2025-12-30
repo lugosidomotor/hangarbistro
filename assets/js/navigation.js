@@ -115,21 +115,18 @@
   });
 
 
-  // ========== Sticky Navbar Shadow ==========
+  // ========== Sticky Navbar ==========
   const navbar = document.querySelector('.navbar');
-  let lastScrollTop = 0;
 
   window.addEventListener('scroll', function () {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // Add shadow when scrolled
+    // Add scrolled class when scrolled (adds translucent background)
     if (scrollTop > 10) {
-      if (navbar) navbar.style.boxShadow = 'var(--shadow-md)';
+      if (navbar) navbar.classList.add('navbar--scrolled');
     } else {
-      if (navbar) navbar.style.boxShadow = 'var(--shadow-sm)';
+      if (navbar) navbar.classList.remove('navbar--scrolled');
     }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
 
 
