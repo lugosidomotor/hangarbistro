@@ -660,3 +660,195 @@
   background-color: var(--color-gold-muted);
   color: var(--color-gold-dark);
 }
+
+
+/* ========== COOKIE CONSENT BANNER ========== */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-modal);
+  background-color: rgba(45, 41, 38, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: var(--space-5) var(--space-6);
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.4s var(--ease-out),
+              opacity 0.4s var(--ease-out),
+              visibility 0.4s;
+}
+
+.cookie-banner.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.cookie-banner__content {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.cookie-banner__text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.cookie-banner__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+.cookie-banner__description {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: var(--line-height-relaxed);
+}
+
+.cookie-banner__actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .cookie-banner {
+    padding: var(--space-5) var(--space-4);
+  }
+
+  .cookie-banner__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cookie-banner__actions {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* ========== SOCIAL SHARE BUTTONS ========== */
+
+.share-buttons {
+  position: fixed;
+  left: var(--space-5);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: var(--z-sticky);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.share-buttons__label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  margin-bottom: var(--space-2);
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-base) var(--ease-out);
+  box-shadow: var(--shadow-sm);
+}
+
+.share-btn:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-md);
+}
+
+.share-btn--facebook:hover {
+  background-color: #1877F2;
+  border-color: #1877F2;
+  color: var(--color-white);
+}
+
+.share-btn--twitter:hover {
+  background-color: #000000;
+  border-color: #000000;
+  color: var(--color-white);
+}
+
+.share-btn--linkedin:hover {
+  background-color: #0A66C2;
+  border-color: #0A66C2;
+  color: var(--color-white);
+}
+
+.share-btn--copy:hover {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+  color: var(--color-white);
+}
+
+.share-btn--copy.is-copied {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+  color: var(--color-white);
+}
+
+/* Mobile: horizontal at bottom */
+@media (max-width: 768px) {
+  .share-buttons {
+    left: 50%;
+    top: auto;
+    bottom: var(--space-20);
+    transform: translateX(-50%);
+    flex-direction: row;
+    background-color: var(--color-white);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .share-buttons__label {
+    writing-mode: horizontal-tb;
+    transform: none;
+    margin-bottom: 0;
+    margin-right: var(--space-2);
+  }
+
+  .share-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Hide share buttons when cookie banner is visible */
+.cookie-banner.is-visible ~ .share-buttons {
+  bottom: calc(var(--space-20) + 80px);
+}
+
+@media (max-width: 768px) {
+  .cookie-banner.is-visible ~ .share-buttons {
+    bottom: calc(var(--space-20) + 120px);
+  }
+}
